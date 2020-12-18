@@ -1,7 +1,7 @@
 # lodestone-css-selectors
 CSS selectors for The Lodestone.
 
-## Character Profile (`profile.json`)
+## Character Profile (`profile/profile.json`)
 
 ### Attributes (`profile/attributes.json`)
 Attribute data is on the main profile page.
