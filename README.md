@@ -12,7 +12,7 @@ Gearset data is on the main profile page.
 ### Classjobs (profile/classjob.json)
 Classjob data is on the `/class_job` endpoint.
 
-### Mounts/Minions (profile/minion.json)
+### Mounts/Minions (profile/minion.json and profile/mount.json)
 Mount and minion data are on their own `/mount` and `/minion` endpoints, and need to be scraped using a mobile user agent. With a desktop UA, the mount/minion names are
 injected into the page with AJAX, and separate requests need to be made to get every single one.
 
