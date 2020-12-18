@@ -1,0 +1,5 @@
+{
+    "LIST": ".ldst__achievement > ul:nth-child(3)",
+    "ID": ".entry__achievement",
+    "LIST_NEXT_BUTTON": "ul.btn__pager:nth-child(2) > li:nth-child(4) > a:nth-child(1)"
+}
