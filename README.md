@@ -3,7 +3,13 @@ CSS selectors for The Lodestone.
 
 ## Character Profile (profile.json)
 
-### Classjobs
+### Attributes (profile/attributes.json)
+Attribute data is on the main profile page.
+
+### Gearset (profile/gearset.json)
+Gearset data is on the main profile page.
+
+### Classjobs (profile/classjob.json)
 Classjob data is on the `/class_job` endpoint.
 
 ### Mounts/Minions
