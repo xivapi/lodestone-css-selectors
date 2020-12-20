@@ -1,102 +1,164 @@
 {
-    "BOZJA_LEVEL": "div.character__job__list:nth-child(7) > div:nth-child(2)",
-    "BOZJA_METTLE": "div.character__job__list:nth-child(7) > div:nth-child(4)",
-    "BOZJA_NAME": "div.character__job__list:nth-child(7) > div:nth-child(3)",
-    "EUREKA_EXP": "div.character__job__list:nth-child(9) > div:nth-child(4)",
-    "EUREKA_LEVEL": "div.character__job__list:nth-child(9) > div:nth-child(2)",
-    "EUREKA_NAME": "div.character__job__list:nth-child(9) > div:nth-child(3)",
+    "BOZJA": {
+        "LEVEL": "div.character__job__list:nth-child(7) > div:nth-child(2)",
+        "METTLE": "div.character__job__list:nth-child(7) > div:nth-child(4)",
+        "NAME": "div.character__job__list:nth-child(7) > div:nth-child(3)"
+    },
+    "EUREKA": {
+        "EXP": "div.character__job__list:nth-child(9) > div:nth-child(4)",
+        "LEVEL": "div.character__job__list:nth-child(9) > div:nth-child(2)",
+        "NAME": "div.character__job__list:nth-child(9) > div:nth-child(3)"
+    },
 
-    "PALADIN_LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-    "PALADIN_UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-    "PALADIN_EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)",
-    "WARRIOR_LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-    "WARRIOR_UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-    "WARRIOR_EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)",
-    "DARKKNIGHT_LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-    "DARKKNIGHT_UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-    "DARKKNIGHT_EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)",
-    "GUNBREAKER_LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)",
-    "GUNBREAKER_UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)",
-    "GUNBREAKER_EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)",
+    "PALADIN": {
+        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
+        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
+        "EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+    },
+    "WARRIOR": {
+        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
+        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
+        "EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+    },
+    "DARKKNIGHT": {
+        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
+        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
+        "EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+    },
+    "GUNBREAKER": {
+        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)",
+        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)",
+        "EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)"
+    },
 
-    "MONK_LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-    "MONK_UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-    "MONK_EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)",
-    "DRAGOON_LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-    "DRAGOON_UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-    "DRAGOON_EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)",
-    "NINJA_LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-    "NINJA_UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-    "NINJA_EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)",
-    "SAMURAI_LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)",
-    "SAMURAI_UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)",
-    "SAMURAI_EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)",
+    "MONK": {
+        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
+        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
+        "EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+    },
+    "DRAGOON": {
+        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
+        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
+        "EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+    },
+    "NINJA": {
+        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
+        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
+        "EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+    },
+    "SAMURAI": {
+        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)",
+        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)",
+        "EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)"
+    },
 
-    "WHITEMAGE_LEVEL": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-    "WHITEMAGE_UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-    "WHITEMAGE_EXP": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)",
-    "SCHOLAR_LEVEL": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-    "SCHOLAR_UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-    "SCHOLAR_EXP": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)",
-    "ASTROLOGIAN_LEVEL": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-    "ASTROLOGIAN_UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-    "ASTROLOGIAN_EXP": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)",
+    "WHITEMAGE": {
+        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+    },
+    "SCHOLAR": {
+        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+    },
+    "ASTROLOGIAN": {
+        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+    },
     
-    "BARD_LEVEL": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-    "BARD_UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-    "BARD_EXP": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)",
-    "MACHINIST_LEVEL": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-    "MACHINIST_UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-    "MACHINIST_EXP": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)",
-    "DANCER_LEVEL": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-    "DANCER_UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-    "DANCER_EXP": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)",
+    "BARD": {
+        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+    },
+    "MACHINIST": {
+        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+    },
+    "DANCER": {
+        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+    },
 
-    "BLACKMAGE_LEVEL": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(2)",
-    "BLACKMAGE_UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(3)",
-    "BLACKMAGE_EXP": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(4)",
-    "SUMMONER_LEVEL": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(2)",
-    "SUMMONER_UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(3)",
-    "SUMMONER_EXP": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(4)",
-    "REDMAGE_LEVEL": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(2)",
-    "REDMAGE_UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(2)",
-    "REDMAGE_EXP": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(2)",
-    "BLUEMAGE_LEVEL": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(2)",
-    "BLUEMAGE_UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(2)",
-    "BLUEMAGE_EXP": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(2)",
+    "BLACKMAGE": {
+        "LEVEL": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(2)",
+        "UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(3)",
+        "EXP": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(4)"
+    },
+    "SUMMONER": {
+        "LEVEL": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(2)",
+        "UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(3)",
+        "EXP": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(4)"
+    },
+    "REDMAGE": {
+        "LEVEL": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(2)",
+        "UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(2)",
+        "EXP": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(2)"
+    },
+    "BLUEMAGE": {
+        "LEVEL": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(2)",
+        "UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(2)",
+        "EXP": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(2)"
+    },
 
-    "CARPENTER_LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-    "CARPENTER_UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-    "CARPENTER_EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)",
-    "BLACKSMITH_LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-    "BLACKSMITH_UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-    "BLACKSMITH_EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)",
-    "ARMORER_LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-    "ARMORER_UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-    "ARMORER_EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)",
-    "GOLDSMITH_LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)",
-    "GOLDSMITH_UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)",
-    "GOLDSMITH_EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)",
-    "LEATHERWORKER_LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(2)",
-    "LEATHERWORKER_UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(3)",
-    "LEATHERWORKER_EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(4)",
-    "WEAVER_LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(2)",
-    "WEAVER_UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(3)",
-    "WEAVER_EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(4)",
-    "ALCHEMIST_LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(2)",
-    "ALCHEMIST_UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(3)",
-    "ALCHEMIST_EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(4)",
-    "CULINARIAN_LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(2)",
-    "CULINARIAN_UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(3)",
-    "CULINARIAN_EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(4)",
+    "CARPENTER": {
+        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+    },
+    "BLACKSMITH": {
+        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+    },
+    "ARMORER": {
+        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+    },
+    "GOLDSMITH": {
+        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)"
+    },
+    "LEATHERWORKER": {
+        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(4)"
+    },
+    "WEAVER": {
+        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(4)"
+    },
+    "ALCHEMIST": {
+        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(4)"
+    },
+    "CULINARIAN": {
+        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(4)"
+    },
 
-    "MINER_LEVEL": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-    "MINER_UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-    "MINER_EXP": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)",
-    "BOTANIST_LEVEL": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-    "BOTANIST_UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-    "BOTANIST_EXP": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)",
-    "FISHER_LEVEL": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-    "FISHER_UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-    "FISHER_EXP": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+    "MINER": {
+        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+    },
+    "BOTANIST": {
+        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+    },
+    "FISHER": {
+        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
+        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
+        "EXP": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+    }
 }
