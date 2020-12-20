@@ -12,6 +12,7 @@
         }
     },
     "GRAND_COMPANY": "div.character-block:nth-child(4) > div:nth-child(2) > p:nth-child(2)",
+    "GUARDIAN_DEITY": "p.character-block__name:nth-child(4)",
     "NAME": "div.frame__chara__box:nth-child(2) > .frame__chara__name",
     "NAMEDAY": ".character-block__birth",
     "PORTRAIT": ".js__image_popup > img:nth-child(1)",
