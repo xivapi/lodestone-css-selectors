@@ -6,9 +6,9 @@
     "FREE_COMPANY": {
         "NAME": ".character__freecompany__name > h4:nth-child(2) > a:nth-child(1)",
         "ICON_LAYERS": {
-            "BOTTOM": "div.character__freecompany__crest > img:nth-child(1)",
-            "MIDDLE": "div.character__freecompany__crest > img:nth-child(1)",
-            "TOP": "div.character__freecompany__crest > img:nth-child(1)"
+            "BOTTOM": "div.character__freecompany__crest > div > img:nth-child(1)",
+            "MIDDLE": "div.character__freecompany__crest > div > img:nth-child(1)",
+            "TOP": "div.character__freecompany__crest > div > img:nth-child(1)"
         }
     },
     "GRAND_COMPANY": "div.character-block:nth-child(4) > div:nth-child(2) > p:nth-child(2)",
@@ -18,9 +18,9 @@
     "PVP_TEAM": {
         "NAME": ".character__pvpteam__name > h4:nth-child(2) > a:nth-child(1)",
         "ICON_LAYERS": {
-            "BOTTOM": "div.character__pvpteam__crest__image > img:nth-child(1)",
-            "MIDDLE": "div.character__pvpteam__crest__image > img:nth-child(2)",
-            "TOP": "div.character__pvpteam__crest__image > img:nth-child(3)"
+            "BOTTOM": "div.character__pvpteam__crest__image > div > img:nth-child(1)",
+            "MIDDLE": "div.character__pvpteam__crest__image > div > img:nth-child(2)",
+            "TOP": "div.character__pvpteam__crest__image > div > img:nth-child(3)"
         }
     },
     "RACE_CLAN_GENDER": "div.character-block:nth-child(1) > div:nth-child(2) > p:nth-child(2)",

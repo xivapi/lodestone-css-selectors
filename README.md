@@ -2,6 +2,8 @@
 CSS selectors for The Lodestone.
 
 ## Character Profile
+Do note that in Firefox, some page elements are slightly different from in other browsers. Use no user agent or try the provided ones in `meta.json`.
+
 ### Character info (`profile/character.json`)
 Basic character data is on the main profile page.
 
