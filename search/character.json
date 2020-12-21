@@ -1,0 +1,35 @@
+{
+    "ENTRIES": {
+        "selector": ".ldst__window > div.entry"
+    },
+    "ENTRY": {
+        "AVATAR": {
+            "selector": ".entry__chara__face > img"
+        },
+        "FEAST_MATCHES": {
+            "selector": ".ldst__window > div.entry"
+        },
+        "ID": {
+            "selector": ".entry__link",
+            "regex": "/lodestone/character/(?P<ID>\\d*)/"
+        },
+        "LANG": {
+            "selector": ".entry__chara__lang"
+        },
+        "NAME": {
+            "selector": ".entry__name"
+        },
+        "RANK": {
+            "selector": ".entry__chara_info > .js__tooltip"
+        },
+        "RANK_ICON": {
+            "selector": ".entry__chara_info > .js__tooltip > img"
+        },
+        "SERVER": {
+            "selector": ".entry__world"
+        }
+    },
+    "LIST_NEXT_BUTTON": {
+        "selector": "ul.btn__pager:nth-child(7) > li:nth-child(4) > a:nth-child(1)"
+    }
+}
