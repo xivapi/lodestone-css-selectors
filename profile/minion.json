@@ -1,4 +1,8 @@
 {
-    "LIST": ".minion__list",
-    "NAME": ".minion__name"
+    "LIST": {
+        "selector": ".minion__list"
+    },
+    "NAME": {
+        "selector": ".minion__name"
+    }
 }

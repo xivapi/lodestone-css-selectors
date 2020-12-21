@@ -1,187 +1,462 @@
 {
     "MAINHAND": {
-        "NAME": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "OFFHAND": {
-        "NAME": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "HEAD": {
-        "NAME": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "BODY": {
-        "NAME": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "HANDS": {
-        "NAME": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "WAIST": {
-        "NAME": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "LEGS": {
-        "NAME": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "FEET": {
-        "NAME": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-    
     "EARRINGS": {
-        "NAME": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "NECKLACE": {
-        "NAME": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "BRACELETS": {
-        "NAME": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "RING1": {
-        "NAME": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "RING2": {
-        "NAME": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
-        "DB_LINK": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)",
-        "MIRAGE_NAME": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)",
-        "MIRAGE_DB_LINK": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)",
-        "STAIN": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
-        "MATERIA_1": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)",
-        "MATERIA_2": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)",
-        "MATERIA_3": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)",
-        "MATERIA_4": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)",
-        "MATERIA_5": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)",
-        "CREATOR_NAME": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        "NAME": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1)"
+        },
+        "MIRAGE_NAME": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2)"
+        },
+        "MIRAGE_DB_LINK": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(2) > a:nth-child(1)"
+        },
+        "STAIN": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+        },
+        "MATERIA_1": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "MATERIA_2": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "MATERIA_3": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "MATERIA_4": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "MATERIA_5": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > ul:nth-child(7) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "CREATOR_NAME": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        }
     },
-
     "SOULCRYSTAL": {
-        "NAME": ".icon-c--13 > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        "NAME": {
+            "selector": ".icon-c--13 > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        }
     }
 }

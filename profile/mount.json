@@ -1,4 +1,8 @@
 {
-    "LIST": ".mount__list",
-    "NAME": ".mount__name"
+    "LIST": {
+        "selector": ".mount__list"
+    },
+    "NAME": {
+        "selector": ".mount__name"
+    }
 }

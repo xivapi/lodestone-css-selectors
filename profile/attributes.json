@@ -1,27 +1,59 @@
 {
-    "STRENGTH": "table.character__param__list:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)",
-    "DEXTERITY": "table.character__param__list:nth-child(2) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)",
-    "VITALITY": "table.character__param__list:nth-child(2) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2)",
-    "INTELLIGENCE": "table.character__param__list:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2)",
-    "MIND": "table.character__param__list:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(2)",
-
-    "CRITICAL_HIT_RATE": "table.character__param__list:nth-child(4) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)",
-    "DETERMINATION": "table.character__param__list:nth-child(4) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)",
-    "DIRECT_HIT_RATE": "table.character__param__list:nth-child(4) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2)",
-
-    "DEFENSE": "table.character__param__list:nth-child(6) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)",
-    "MAGIC_DEFENSE": "table.character__param__list:nth-child(6) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)",
-
-    "ATTACK_POWER": "table.character__param__list:nth-child(8) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)",
-    "SKILL_SPEED": "table.character__param__list:nth-child(8) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)",
-
-    "ATTACK_MAGIC_POTENCY": "table.character__param__list:nth-child(10) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)",
-    "HEALING_MAGIC_POTENCY": "table.character__param__list:nth-child(10) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)",
-    "SPELL_SPEED": "table.character__param__list:nth-child(10) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2)",
-
-    "TENACITY": "table.character__param__list:nth-child(12) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)",
-    "PIETY": "table.character__param__list:nth-child(12) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)",
-
-    "HP": ".character__param > ul:nth-child(1) > li:nth-child(1) > div:nth-child(1) > span:nth-child(2)",
-    "MP_GP_CP": ".character__param > ul:nth-child(1) > li:nth-child(2) > div:nth-child(1) > span:nth-child(2)"
+    "STRENGTH": {
+        "selector": "table.character__param__list:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)"
+    },
+    "DEXTERITY": {
+        "selector": "table.character__param__list:nth-child(2) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)"
+    },
+    "VITALITY": {
+        "selector": "table.character__param__list:nth-child(2) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2)"
+    },
+    "INTELLIGENCE": {
+        "selector": "table.character__param__list:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2)"
+    },
+    "MIND": {
+        "selector": "table.character__param__list:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(2)"
+    },
+    "CRITICAL_HIT_RATE": {
+        "selector": "table.character__param__list:nth-child(4) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)"
+    },
+    "DETERMINATION": {
+        "selector": "table.character__param__list:nth-child(4) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)"
+    },
+    "DIRECT_HIT_RATE": {
+        "selector": "table.character__param__list:nth-child(4) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2)"
+    },
+    "DEFENSE": {
+        "selector": "table.character__param__list:nth-child(6) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)"
+    },
+    "MAGIC_DEFENSE": {
+        "selector": "table.character__param__list:nth-child(6) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)"
+    },
+    "ATTACK_POWER": {
+        "selector": "table.character__param__list:nth-child(8) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)"
+    },
+    "SKILL_SPEED": {
+        "selector": "table.character__param__list:nth-child(8) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)"
+    },
+    "ATTACK_MAGIC_POTENCY": {
+        "selector": "table.character__param__list:nth-child(10) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)"
+    },
+    "HEALING_MAGIC_POTENCY": {
+        "selector": "table.character__param__list:nth-child(10) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)"
+    },
+    "SPELL_SPEED": {
+        "selector": "table.character__param__list:nth-child(10) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2)"
+    },
+    "TENACITY": {
+        "selector": "table.character__param__list:nth-child(12) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2)"
+    },
+    "PIETY": {
+        "selector": "table.character__param__list:nth-child(12) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(2)"
+    },
+    "HP": {
+        "selector": ".character__param > ul:nth-child(1) > li:nth-child(1) > div:nth-child(1) > span:nth-child(2)"
+    },
+    "MP_GP_CP": {
+        "selector": ".character__param > ul:nth-child(1) > li:nth-child(2) > div:nth-child(1) > span:nth-child(2)"
+    }
 }

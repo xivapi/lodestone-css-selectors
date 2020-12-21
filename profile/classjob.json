@@ -1,164 +1,343 @@
 {
     "BOZJA": {
-        "LEVEL": "div.character__job__list:nth-child(7) > div:nth-child(2)",
-        "METTLE": "div.character__job__list:nth-child(7) > div:nth-child(4)",
-        "NAME": "div.character__job__list:nth-child(7) > div:nth-child(3)"
+        "LEVEL": {
+            "selector": "div.character__job__list:nth-child(7) > div:nth-child(2)"
+        },
+        "METTLE": {
+            "selector": "div.character__job__list:nth-child(7) > div:nth-child(4)"
+        },
+        "NAME": {
+            "selector": "div.character__job__list:nth-child(7) > div:nth-child(3)"
+        }
     },
     "EUREKA": {
-        "EXP": "div.character__job__list:nth-child(9) > div:nth-child(4)",
-        "LEVEL": "div.character__job__list:nth-child(9) > div:nth-child(2)",
-        "NAME": "div.character__job__list:nth-child(9) > div:nth-child(3)"
+        "EXP": {
+            "selector": "div.character__job__list:nth-child(9) > div:nth-child(4)"
+        },
+        "LEVEL": {
+            "selector": "div.character__job__list:nth-child(9) > div:nth-child(2)"
+        },
+        "NAME": {
+            "selector": "div.character__job__list:nth-child(9) > div:nth-child(3)"
+        }
     },
-
     "PALADIN": {
-        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-        "EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        }
     },
     "WARRIOR": {
-        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-        "EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        }
     },
     "DARKKNIGHT": {
-        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-        "EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        }
     },
     "GUNBREAKER": {
-        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)",
-        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)",
-        "EXP": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)"
+        }
     },
-
     "MONK": {
-        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-        "EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        }
     },
     "DRAGOON": {
-        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-        "EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        }
     },
     "NINJA": {
-        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-        "EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        }
     },
     "SAMURAI": {
-        "LEVEL": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)",
-        "UNLOCKSTATE": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)",
-        "EXP": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)"
+        }
     },
-
     "WHITEMAGE": {
-        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        }
     },
     "SCHOLAR": {
-        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        }
     },
     "ASTROLOGIAN": {
-        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        }
     },
-    
     "BARD": {
-        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        }
     },
     "MACHINIST": {
-        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        }
     },
     "DANCER": {
-        "LEVEL": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        }
     },
-
     "BLACKMAGE": {
-        "LEVEL": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(2)",
-        "UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(3)",
-        "EXP": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(1) > div:nth-child(4)"
+        }
     },
     "SUMMONER": {
-        "LEVEL": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(2)",
-        "UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(3)",
-        "EXP": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(2) > div:nth-child(4)"
+        }
     },
     "REDMAGE": {
-        "LEVEL": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(2)",
-        "UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(3)",
-        "EXP": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(3) > div:nth-child(4)"
+        }
     },
     "BLUEMAGE": {
-        "LEVEL": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(2)",
-        "UNLOCKSTATE": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(3)",
-        "EXP": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "ul.character__job:nth-child(4) > li:nth-child(4) > div:nth-child(4)"
+        }
     },
-
     "CARPENTER": {
-        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        }
     },
     "BLACKSMITH": {
-        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        }
     },
     "ARMORER": {
-        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        }
     },
     "GOLDSMITH": {
-        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)"
+        }
     },
     "LEATHERWORKER": {
-        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(4)"
+        }
     },
     "WEAVER": {
-        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(6) > div:nth-child(4)"
+        }
     },
     "ALCHEMIST": {
-        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(4)"
+        }
     },
     "CULINARIAN": {
-        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(8) > div:nth-child(4)"
+        }
     },
-
     "MINER": {
-        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(4)"
+        }
     },
     "BOTANIST": {
-        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(4)"
+        }
     },
     "FISHER": {
-        "LEVEL": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)",
-        "UNLOCKSTATE": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)",
-        "EXP": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(5) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(4)"
+        }
     }
 }
