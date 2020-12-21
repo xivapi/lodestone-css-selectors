@@ -7,7 +7,8 @@
         "regex": "LEVEL (?P<Level>\\d*)"
     },
     "AVATAR": {
-        "selector": ".frame__chara__face > img:nth-child(1)"
+        "selector": ".frame__chara__face > img:nth-child(1)",
+	"attribute": "src"
     },
     "BIO": {
         "selector": ".character__selfintroduction"
@@ -19,13 +20,16 @@
         },
         "ICON_LAYERS": {
             "BOTTOM": {
-                "selector": "div.character__freecompany__crest > div > img:nth-child(1)"
+                "selector": "div.character__freecompany__crest > div > img:nth-child(1)",
+		"attribute": "src"
             },
             "MIDDLE": {
-                "selector": "div.character__freecompany__crest > div > img:nth-child(1)"
+                "selector": "div.character__freecompany__crest > div > img:nth-child(1)",
+		"attribute": "src"
             },
             "TOP": {
-                "selector": "div.character__freecompany__crest > div > img:nth-child(1)"
+                "selector": "div.character__freecompany__crest > div > img:nth-child(1)",
+		"attribute": "src"
             }
         }
     },
@@ -42,7 +46,8 @@
         "selector": ".character-block__birth"
     },
     "PORTRAIT": {
-        "selector": ".js__image_popup > img:nth-child(1)"
+        "selector": ".js__image_popup > img:nth-child(1)",
+	"attribute": "src"
     },
     "PVP_TEAM": {
         "NAME": {
@@ -51,13 +56,16 @@
         },
         "ICON_LAYERS": {
             "BOTTOM": {
-                "selector": "div.character__pvpteam__crest__image > div > img:nth-child(1)"
+                "selector": "div.character__pvpteam__crest__image > div > img:nth-child(1)",
+		"attribute": "src"
             },
             "MIDDLE": {
-                "selector": "div.character__pvpteam__crest__image > div > img:nth-child(2)"
+                "selector": "div.character__pvpteam__crest__image > div > img:nth-child(2)",
+		"attribute": "src"
             },
             "TOP": {
-                "selector": "div.character__pvpteam__crest__image > div > img:nth-child(3)"
+                "selector": "div.character__pvpteam__crest__image > div > img:nth-child(3)",
+		"attribute": "src"
             }
         }
     },
