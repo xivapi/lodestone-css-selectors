@@ -17,7 +17,8 @@
             "selector": ".entry__name"
         },
         "RANK": {
-            "selector": ".entry__chara_info > .js__tooltip"
+            "selector": ".entry__chara_info > .js__tooltip",
+            "regex": "/ \\w+ (?P<RankName>.+)"
         },
         "RANK_ICON": {
             "selector": ".entry__chara_info > .js__tooltip > img"
