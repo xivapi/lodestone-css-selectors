@@ -3,10 +3,12 @@
         "selector": ".ldst__achievement > ul:nth-child(3)"
     },
     "LIST_NEXT_BUTTON": {
-        "selector": "ul.btn__pager:nth-child(2) > li:nth-child(4) > a:nth-child(1)"
+        "selector": "ul.btn__pager:nth-child(2) > li:nth-child(4) > a:nth-child(1)",
+        "attribute": "href"
     },
     "ID": {
         "selector": ".entry__achievement",
+        "attribute": "href",
         "regex": "/lodestone/character/\\d*/achievement/detail/(?P<ID>\\d*)/"
     },
     "TIME": {
