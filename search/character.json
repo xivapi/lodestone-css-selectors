@@ -34,6 +34,7 @@
         "selector": "ul.btn__pager:nth-child(7) > li:nth-child(4) > a:nth-child(1)"
     },
     "PAGE_INFO": {
-        "selector": "#community > div.ldst__bg > div.ldst__contents.clearfix > div.ldst__main > div > ul:nth-child(57) > li.btn__pager__current"
+        "selector": "#community > div.ldst__bg > div.ldst__contents.clearfix > div.ldst__main > div > ul:nth-child(57) > li.btn__pager__current",
+        "regex": "Page (?P<CurrentPage>[0-9*]) of (?P<NumPages>[0-9*])"
     }
 }
