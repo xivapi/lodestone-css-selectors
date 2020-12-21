@@ -11,6 +11,7 @@
         },
         "ID": {
             "selector": ".entry__link",
+            "attribute": "href",
             "regex": "/lodestone/character/(?P<ID>\\d*)/"
         },
         "LANG": {
@@ -21,10 +22,12 @@
         },
         "RANK": {
             "selector": ".entry__chara_info > .js__tooltip",
+            "attribute": "data-tooltip",
             "regex": "/ \\w+ (?P<RankName>.+)"
         },
         "RANK_ICON": {
-            "selector": ".entry__chara_info > .js__tooltip > img"
+            "selector": ".entry__chara_info > .js__tooltip > img",
+            "attribute": "src"
         },
         "SERVER": {
             "selector": ".entry__world"
