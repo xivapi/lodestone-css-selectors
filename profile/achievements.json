@@ -3,7 +3,8 @@
         "selector": ".ldst__achievement > ul:nth-child(3)"
     },
     "ID": {
-        "selector": ".entry__achievement"
+        "selector": ".entry__achievement",
+        "regex": "/lodestone/character/\\d*/achievement/detail/(?P<ID>\\d*)/"
     },
     "LIST_NEXT_BUTTON": {
         "selector": "ul.btn__pager:nth-child(2) > li:nth-child(4) > a:nth-child(1)"
