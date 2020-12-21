@@ -41,5 +41,8 @@
     "PAGE_INFO": {
         "selector": "ul.btn__pager > li:nth-child(3)",
         "regex": "Page (?P<CurrentPage>[0-9*]) of (?P<NumPages>[0-9*])"
+    },
+    "NO_RESULTS_FOUND": {
+        "selector": ".parts__zero"
     }
 }
