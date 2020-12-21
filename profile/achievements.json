@@ -15,6 +15,6 @@
         "regex": "/lodestone/character/\\d*/achievement/detail/(?P<ID>\\d*)/"
     },
     "TIME": {
-        "selector": ".entry__activity__time"
+        "selector": ".entry__activity__time > span"
     }
 }
