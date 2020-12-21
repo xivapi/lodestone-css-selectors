@@ -1,4 +1,7 @@
 {
+    "ENTRIES_CONTAINER": {
+        "selector": ".ldst__window"
+    },
     "ENTRIES": {
         "selector": ".ldst__window > div.entry"
     },
