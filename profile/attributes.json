@@ -55,5 +55,8 @@
     },
     "MP_GP_CP": {
         "selector": ".character__param > ul:nth-child(1) > li:nth-child(2) > div:nth-child(1) > span:nth-child(2)"
+    },
+    "MP_GP_CP_PARAMETER_NAME": {
+        "selector": ".character__param > ul > li:nth-child(2) .character__param__text"
     }
 }
