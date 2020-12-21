@@ -6,9 +6,6 @@
         "AVATAR": {
             "selector": ".entry__chara__face > img"
         },
-        "FEAST_MATCHES": {
-            "selector": ".ldst__window > div.entry"
-        },
         "ID": {
             "selector": ".entry__link",
             "regex": "/lodestone/character/(?P<ID>\\d*)/"
