@@ -1,0 +1,8 @@
+{
+    "NAME": {
+        "selector": ".heading__linkshell__name"
+    },
+    "DC": {
+        "selector": ".heading__cwls__dcname"
+    }
+}
