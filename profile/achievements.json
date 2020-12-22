@@ -17,5 +17,8 @@
     "TIME": {
         "selector": ".entry__activity__time > script",
         "regex": ".*ldst_strftime\\((?P<Timestamp>\\d*)"
+    },
+    "NO_RESULTS_FOUND": {
+        "selector": ".parts__zero"
     }
 }
