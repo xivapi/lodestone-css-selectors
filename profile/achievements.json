@@ -18,6 +18,17 @@
         "selector": ".entry__activity__time > script",
         "regex": ".*ldst_strftime\\((?P<Timestamp>\\d*)"
     },
+    "PAGE_INFO": {
+        "selector": "ul.btn__pager > li:nth-child(3)",
+        "regex": "Page (?P<CurrentPage>[0-9]*) of (?P<NumPages>[0-9]*)"
+    },
+    "TOTAL_ACHIEVEMENTS": {
+        "selector": ".parts__total",
+        "regex": "(?P<TotalAchievements>[0-9]*) Total"
+    },
+    "ACHIEVEMENT_POINTS": {
+        "selector": ".achievement__point"
+    },
     "NO_RESULTS_FOUND": {
         "selector": ".parts__zero"
     }
