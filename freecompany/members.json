@@ -30,5 +30,9 @@
             "selector": ".entry__world",
             "regex": "(?P<World>\\w*)[\\s\\x{00A0}]\\((?P<DC>\\w*)\\)"
         }
+    },
+    "LIST_NEXT_BUTTON": {
+        "selector": "ul.btn__pager:nth-child(4) > li:nth-child(4) > a:nth-child(1)",
+        "attribute": "href"
     }
 }
