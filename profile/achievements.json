@@ -31,5 +31,8 @@
     },
     "NO_RESULTS_FOUND": {
         "selector": ".parts__zero"
+    },
+    "ACTIVITY_DESCRIPTION": {
+        "selector": ".entry__activity__txt"
     }
 }
