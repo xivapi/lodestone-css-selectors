@@ -1,6 +1,7 @@
 {
     "ACTIVE_STATE": {
-        "selector": "p.freecompany__text:nth-child(3)"
+        "selector": "p.freecompany__text:nth-child(3)",
+        "regex": "\\s*(?P<ActiveState>\\S*)"
     },
     "ACTIVE_MEMBER_COUNT": {
         "selector": "p.freecompany__text:nth-child(12)"
@@ -70,8 +71,7 @@
         "regex": "(?P<World>\\w*)[\\s\\x{00A0}]\\((?P<DC>\\w*)\\)"
     },
     "SLOGAN": {
-        "selector": "p.freecompany__text:nth-child(4)",
-        "regex": "\\s*(?P<ActiveState>\\S*)"
+        "selector": "p.freecompany__text:nth-child(4)"
     },
     "TAG": {
         "selector": "p.freecompany__text:nth-child(8)"
