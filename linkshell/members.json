@@ -1,6 +1,6 @@
 {
     "ENTRIES_CONTAINER": {
-        "selector": ""
+        "selector": ".ldst__window"
     },
     "ENTRY": {
         "ROOT": {
