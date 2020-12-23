@@ -4,5 +4,8 @@
     },
     "NAME": {
         "selector": ".minion__name"
+    },
+    "TOTAL": {
+        "selector": ".minion__sort__total > span:nth-child(1)"
     }
 }
