@@ -1,5 +1,6 @@
 # lodestone-css-selectors
-CSS selectors for The Lodestone.
+CSS selectors for The Lodestone. These selectors are all made for non-browser clients; they may break in various browsers
+due to DOM elements being injected by the browser itself. Please test them in a parser before reporting any errors.
 
 ## Character Profile
 Do note that in Firefox, some page elements are slightly different from in other browsers. Use no user agent or try the provided ones in `meta.json`.
