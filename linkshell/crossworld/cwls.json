@@ -1,6 +1,7 @@
 {
     "NAME": {
-        "selector": ".heading__linkshell__name"
+        "selector": ".heading__linkshell__name",
+        "regex": "\\s*(?P<Name>\\S*)"
     },
     "DC": {
         "selector": ".heading__cwls__dcname"
