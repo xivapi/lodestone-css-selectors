@@ -36,7 +36,7 @@
     },
     "GRAND_COMPANY": {
         "selector": "div.character-block:nth-child(4) > div:nth-child(2) > p:nth-child(2)",
-        "regex": "(?P<Name>\w*) \/ (?P<Rank>.*)"
+        "regex": "(?P<Name>\\w*) \/ (?P<Rank>.*)"
     },
     "GUARDIAN_DEITY": {
         "NAME": {
