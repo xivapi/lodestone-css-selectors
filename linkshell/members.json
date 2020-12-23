@@ -17,9 +17,6 @@
         "NAME": {
             "selector": ".entry__name"
         },
-        "MATCHES": {
-            "selector": ".entry__freecompany__info > li:last-of-type > span"
-        },
         "RANK": {
             "selector": ".entry__chara_info__linkshell > span"
         },
