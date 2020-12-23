@@ -1,13 +1,14 @@
 {
     "ENTRIES_CONTAINER": {
-        "selector": ""
+        "selector": ".ldst__window"
     },
     "ENTRY": {
         "ROOT": {
             "selector": "div.entry"
         },
         "AVATAR": {
-            "selector": ".entry__chara__face img"
+            "selector": ".entry__chara__face img",
+            "attribute": "src"
         },
         "ID": {
             "selector": ".entry__link",
@@ -18,9 +19,18 @@
             "selector": ".entry__name"
         },
         "RANK": {
-            "selector": ".entry__chara_info__linkshell > span"
+            "selector": ".entry__chara_info > .js__tooltip",
+            "attribute": "data-tooltip",
+            "regex": "/ \\w+ (?P<RankName>.+)"
         },
         "RANK_ICON": {
+            "selector": ".entry__chara_info > .js__tooltip > img",
+            "attribute": "src"
+        },
+        "LINKSHELL_RANK": {
+            "selector": ".entry__chara_info__linkshell > span"
+        },
+        "LINKSHELL_RANK_ICON": {
             "selector": ".entry__chara_info__linkshell > img",
             "attribute": "src"
         },
