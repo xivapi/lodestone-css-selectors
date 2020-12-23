@@ -21,7 +21,7 @@
         "RANK": {
             "selector": ".entry__chara_info > .js__tooltip",
             "attribute": "data-tooltip",
-            "regex": "/ \\w+ (?P<RankName>.+)"
+            "regex": "/ (?P<RankName>.+)"
         },
         "RANK_ICON": {
             "selector": ".entry__chara_info > .js__tooltip > img",
