@@ -1,4 +1,7 @@
 {
+    "NOT_SPECIFIED": {
+        "selector": "p.freecompany__text:nth-child(7)"
+    },
     "RP": {
         "NAME": {
             "selector": "ul.freecompany__focus_icon:nth-child(7) > li:nth-child(1) > p:nth-child(2)"
