@@ -23,7 +23,7 @@
         "ID": {
             "selector": ".entry__block",
             "attribute": "href",
-            "regex": "/lodestone/pvpteam/(?P<ID>\\d*)/"
+            "regex": "/lodestone/pvpteam/(?P<ID>\\w*)/"
         },
         "NAME": {
             "selector": ".entry__name"
