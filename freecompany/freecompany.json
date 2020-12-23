@@ -70,7 +70,8 @@
         "regex": "(?P<World>\\w*)[\\s\\x{00A0}]\\((?P<DC>\\w*)\\)"
     },
     "SLOGAN": {
-        "selector": "p.freecompany__text:nth-child(4)"
+        "selector": "p.freecompany__text:nth-child(4)",
+        "regex": "\\s*(?P<ActiveState>\\S*)"
     },
     "TAG": {
         "selector": "p.freecompany__text:nth-child(8)"
