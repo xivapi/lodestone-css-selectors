@@ -7,7 +7,8 @@
             "selector": "div.entry"
         },
         "AVATAR": {
-            "selector": ".entry__chara__face img"
+            "selector": ".entry__chara__face img",
+            "attribute": "src"
         },
         "ID": {
             "selector": ".entry__link",
