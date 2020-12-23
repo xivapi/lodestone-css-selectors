@@ -9,7 +9,7 @@
         "ID": {
             "selector": ".entry__link--line",
             "attribute": "href",
-            "regex": "/lodestone/linkshell/(?P<ID>\\w*)/"
+            "regex": "/lodestone/crossworld_linkshell/(?P<ID>\\w*)/"
         },
         "NAME": {
             "selector": ".entry__name"
