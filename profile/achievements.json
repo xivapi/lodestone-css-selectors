@@ -22,7 +22,7 @@
         },
         "TOTAL_ACHIEVEMENTS": {
             "selector": ".parts__total",
-            "regex": "(?P<TotalAchievements>[0-9]*) Total"
+            "regex": "(?P<TotalAchievements>[0-9]*) \\D+"
         },
         "ACHIEVEMENT_POINTS": {
             "selector": ".achievement__point"
