@@ -27,9 +27,6 @@
         "ACHIEVEMENT_POINTS": {
             "selector": ".achievement__point"
         },
-        "NO_RESULTS_FOUND": {
-            "selector": ".parts__zero"
-        },
         "ACTIVITY_DESCRIPTION": {
             "selector": ".entry__activity__txt"
         }
@@ -42,4 +39,7 @@
         "selector": "ul.btn__pager:nth-child(2) > li:nth-child(4) > a:nth-child(1)",
         "attribute": "href"
     }
+    "NO_RESULTS_FOUND": {
+        "selector": ".parts__zero"
+    },
 }
