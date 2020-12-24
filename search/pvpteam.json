@@ -38,7 +38,7 @@
         "regex": "Page (?P<CurrentPage>[0-9*]) of (?P<NumPages>[0-9*])"
     },
     "LIST_NEXT_BUTTON": {
-        "selector": "ul.btn__pager:nth-child(6) > li:nth-child(4) > a:nth-child(1)",
+        "selector": "ul.btn__pager > li:nth-child(4) > a:nth-child(1)",
         "attribute": "href"
     },
     "NO_RESULTS_FOUND": {
