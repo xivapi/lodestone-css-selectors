@@ -1,5 +1,5 @@
 {
-    "version": "0.35.1",
+    "version": "0.36.0",
     "userAgentDesktop": "curl/7.73.0",
     "userAgentMobile": "Mozilla/5.0 (iPhone; CPU OS 10_15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 Mobile/14E304 Safari/605.1.15",
     "applicableUris": {
@@ -9,8 +9,9 @@
         "freecompany/reputation.json": "https://na.finalfantasyxiv.com/lodestone/freecompany/%s/",
         "freecompany/seeking.json": "https://na.finalfantasyxiv.com/lodestone/freecompany/%s/",
 
-        "linkshell/crossworld/cwls.json": "https://na.finalfantasyxiv.com/lodestone/crossworld_linkshell/%s/",
-        "linkshell/crossworld/members.json": "https://na.finalfantasyxiv.com/lodestone/crossworld_linkshell/%s/",
+        "cwls/cwls.json": "https://na.finalfantasyxiv.com/lodestone/crossworld_linkshell/%s/",
+        "cwls/members.json": "https://na.finalfantasyxiv.com/lodestone/crossworld_linkshell/%s/",
+
         "linkshell/ls.json": "https://na.finalfantasyxiv.com/lodestone/linkshell/%s/",
         "linkshell/members.json": "https://na.finalfantasyxiv.com/lodestone/linkshell/%s/",
 
