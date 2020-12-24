@@ -72,9 +72,9 @@
         "regex": "(?P<World>\\w*)\\s+\\((?P<DC>\\w*)\\)"
     },
     "SLOGAN": {
-        "selector": "p.freecompany__text:nth-child(4)"
+        "selector": ".freecompany__text__message"
     },
     "TAG": {
-        "selector": "p.freecompany__text:nth-child(8)"
+        "selector": ".freecompany__text.freecompany__text__tag"
     }
 }
