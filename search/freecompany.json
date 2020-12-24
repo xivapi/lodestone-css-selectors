@@ -30,7 +30,8 @@
             "selector": ".entry__name"
         },
         "SERVER": {
-            "selector": ".entry__world"
+            "selector": ".entry__world",
+            "regex": "(?P<World>\\w*)\\s+\\((?P<DC>\\w*)\\)"
         },
         "ACTIVE": {
             "selector": ".entry__freecompany__fc-active:nth-of-type(1)",
