@@ -1,10 +1,11 @@
 {
-    "ENTRIES_CONTAINER": {
+    "ROOT": {
         "selector": ".ldst__window"
     },
     "ENTRY": {
         "ROOT": {
-            "selector": "div.entry"
+            "selector": "div.entry",
+            "multiple": true
         },
         "AVATAR": {
             "selector": ".entry__chara__face > img"

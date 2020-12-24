@@ -1,10 +1,11 @@
 {
-    "ENTRIES_CONTAINER": {
+    "ROOT": {
         "selector": ".pvpteam__member"
     },
     "ENTRY": {
         "ROOT": {
-            "selector": "div.entry"
+            "selector": "div.entry",
+            "multiple": true
         },
         "AVATAR": {
             "selector": ".entry__chara__face img",
