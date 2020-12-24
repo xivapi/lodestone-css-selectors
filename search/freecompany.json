@@ -26,22 +26,25 @@
             "attribute": "href",
             "regex": "/lodestone/freecompany/(?P<ID>\\d*)/"
         },
+        "GRAND_COMPANY": {
+            "selector": ".entry__world:nth-child(1)"
+        },
         "NAME": {
             "selector": ".entry__name"
         },
         "SERVER": {
-            "selector": ".entry__world",
+            "selector": ".entry__world:nth-child(3)",
             "regex": "(?P<World>\\w*)\\s+\\((?P<DC>\\w*)\\)"
         },
         "ACTIVE": {
-            "selector": ".entry__freecompany__fc-active:nth-of-type(1)",
+            "selector": "li.entry__freecompany__fc-active:nth-child(4)",
             "regex": "Active:\\s+(?P<State>\\w*)"
         },
         "ACTIVE_MEMBERS": {
             "selector": ".entry__freecompany__fc-member"
         },
         "RECRUITMENT_OPEN": {
-            "selector": ".entry__freecompany__fc-active:nth-of-type(2)",
+            "selector": "li.entry__freecompany__fc-active:nth-child(5)",
             "regex": "Recruitment:\\s+(?P<State>\\w*)"
         },
         "ESTATE_BUILT": {
