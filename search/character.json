@@ -41,7 +41,7 @@
     },
     "PAGE_INFO": {
         "selector": "ul.btn__pager > li:nth-child(3)",
-        "regex": "Page (?P<CurrentPage>[0-9*]) of (?P<NumPages>[0-9*])"
+        "regex": "\\D*(?P<CurrentPage>\\d+)\\D*(?P<NumPages>\\d+)"
     },
     "NO_RESULTS_FOUND": {
         "selector": ".parts__zero"

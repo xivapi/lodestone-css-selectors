@@ -35,7 +35,7 @@
     },
     "PAGE_INFO": {
         "selector": "ul.btn__pager:nth-child(6) > li:nth-child(3)",
-        "regex": "Page (?P<CurrentPage>[0-9*]) of (?P<NumPages>[0-9*])"
+        "regex": "\\D*(?P<CurrentPage>\\d+)\\D*(?P<NumPages>\\d+)"
     },
     "LIST_NEXT_BUTTON": {
         "selector": "ul.btn__pager > li:nth-child(4) > a:nth-child(1)",
