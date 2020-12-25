@@ -1,7 +1,7 @@
 {
     "ACTIVE_STATE": {
         "selector": "p.freecompany__text:nth-child(3)",
-        "regex": "\\s*(?P<ActiveState>\\S*)"
+        "regex": "\\s*(?P<ActiveState>\\S+\\s?\\S*)"
     },
     "ACTIVE_MEMBER_COUNT": {
         "selector": "p.freecompany__text:nth-child(12)"
