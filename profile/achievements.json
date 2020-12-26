@@ -9,7 +9,7 @@
         },
         "NAME": {
             "selector": ".entry__activity__txt",
-            "regex": "((?P<NameDE>.*) „|.*[\"「](?P<Name>.*)[\"」].*)"
+            "regex": "(?P<NameDE>.*) aus der Kategorie „|.*[\\\"「](?P<Name>.*)[\\\"」]"
         },
         "ID": {
             "selector": ".entry__achievement",
