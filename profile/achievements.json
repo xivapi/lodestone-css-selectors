@@ -15,20 +15,6 @@
         "TIME": {
             "selector": ".entry__activity__time > script",
             "regex": ".*ldst_strftime\\((?P<Timestamp>\\d*)"
-        },
-        "PAGE_INFO": {
-            "selector": "ul.btn__pager > li:nth-child(3)",
-            "regex": "\\D*(?P<CurrentPage>\\d+)\\D*(?P<NumPages>\\d+)"
-        },
-        "TOTAL_ACHIEVEMENTS": {
-            "selector": ".parts__total",
-            "regex": "(?P<TotalAchievements>[0-9]*) \\D+"
-        },
-        "ACHIEVEMENT_POINTS": {
-            "selector": ".achievement__point"
-        },
-        "ACTIVITY_DESCRIPTION": {
-            "selector": ".entry__activity__txt"
         }
     },
     "PAGE_INFO": {
@@ -41,5 +27,15 @@
     },
     "NO_RESULTS_FOUND": {
         "selector": ".parts__zero"
+    },
+    "TOTAL_ACHIEVEMENTS": {
+        "selector": ".parts__total",
+        "regex": "(?P<TotalAchievements>[0-9]*) \\D+"
+    },
+    "ACHIEVEMENT_POINTS": {
+        "selector": ".achievement__point"
+    },
+    "ACTIVITY_DESCRIPTION": {
+        "selector": ".entry__activity__txt"
     }
 }
