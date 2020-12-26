@@ -1,7 +1,8 @@
 {
     "MOUNTS": {
         "ROOT": {
-            "selector": ".mount__list__item"
+            "selector": ".mount__list__item",
+            "multiple": true
         },
         "NAME": {
             "selector": ".mount__name"

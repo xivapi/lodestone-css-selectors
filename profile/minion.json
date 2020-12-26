@@ -1,7 +1,8 @@
 {
     "MINIONS": {
         "ROOT": {
-            "selector": ".minion__list__item"
+            "selector": ".minion__list__item",
+            "multiple": true
         },
         "NAME": {
             "selector": ".minion__name"
