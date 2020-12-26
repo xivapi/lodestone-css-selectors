@@ -1,9 +1,15 @@
 {
-    "LIST": {
-        "selector": ".minion__list"
-    },
-    "NAME": {
-        "selector": ".minion__name"
+    "MINIONS": {
+        "ROOT": {
+            "selector": ".minion__list"
+        },
+        "NAME": {
+            "selector": ".minion__name"
+        },
+        "ICON": {
+            "selector": ".minion__list__icon__image",
+            "attribute": "src"
+        }
     },
     "TOTAL": {
         "selector": ".minion__sort__total > span:nth-child(1)"

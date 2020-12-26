@@ -1,9 +1,15 @@
 {
-    "LIST": {
-        "selector": ".mount__list"
-    },
-    "NAME": {
-        "selector": ".mount__name"
+    "MOUNTS": {
+        "ROOT": {
+            "selector": ".mount__list"
+        },
+        "NAME": {
+            "selector": ".mount__name"
+        },
+        "ICON": {
+            "selector": ".mount__list__icon__image",
+            "attribute": "src"
+        }
     },
     "TOTAL": {
         "selector": ".mount__sort__total > span:nth-child(1)"
