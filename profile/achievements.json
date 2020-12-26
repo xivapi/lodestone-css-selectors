@@ -9,7 +9,7 @@
         },
         "NAME": {
             "selector": ".entry__activity__txt",
-            "regex": ".*[\"「„](?P<Name>.*)[\"」“].*"
+            "regex": "((?P<NameDE>.*) „|.*[\"「](?P<Name>.*)[\"」].*)"
         },
         "ID": {
             "selector": ".entry__achievement",
