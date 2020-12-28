@@ -1,6 +1,7 @@
 {
     "ACTIVE_CLASSJOB": {
-        "selector": ".character__class_icon > img:nth-child(1)"
+        "selector": ".character__class_icon > img:nth-child(1)",
+        "attribute": "src"
     },
     "ACTIVE_CLASSJOB_LEVEL": {
         "selector": ".character__class__data > p:nth-child(1)",
