@@ -71,7 +71,7 @@
             "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
         }
     },
-    "MONK": {
+    "WHITEMAGE": {
         "LEVEL": {
             "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)"
         },
@@ -83,7 +83,7 @@
             "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
         }
     },
-    "DRAGOON": {
+    "SCHOLAR": {
         "LEVEL": {
             "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)"
         },
@@ -95,7 +95,7 @@
             "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
         }
     },
-    "NINJA": {
+    "ASTROLOGIAN": {
         "LEVEL": {
             "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)"
         },
@@ -107,7 +107,7 @@
             "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
         }
     },
-    "SAMURAI": {
+    "SAGE": {
         "LEVEL": {
             "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)"
         },
@@ -119,19 +119,7 @@
             "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
         }
     },
-    "REAPER": {
-        "LEVEL": {
-            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(2)"
-        },
-        "UNLOCKSTATE": {
-            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(3)"
-        },
-        "EXP": {
-            "selector": ".character__content > div:nth-child(2) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(4)",
-            "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
-        }
-    },
-    "WHITEMAGE": {
+    "MONK": {
         "LEVEL": {
             "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)"
         },
@@ -143,7 +131,7 @@
             "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
         }
     },
-    "SCHOLAR": {
+    "DRAGOON": {
         "LEVEL": {
             "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > div:nth-child(2)"
         },
@@ -155,7 +143,7 @@
             "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
         }
     },
-    "ASTROLOGIAN": {
+    "NINJA": {
         "LEVEL": {
             "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > div:nth-child(2)"
         },
@@ -167,7 +155,7 @@
             "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
         }
     },
-    "SAGE": {
+    "SAMURAI": {
         "LEVEL": {
             "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(2)"
         },
@@ -176,6 +164,18 @@
         },
         "EXP": {
             "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) > div:nth-child(4)",
+            "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
+        }
+    },
+    "REAPER": {
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(2)"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(3)"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(5) > div:nth-child(4)",
             "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
         }
     },
