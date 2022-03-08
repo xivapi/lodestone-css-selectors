@@ -19,6 +19,13 @@
         "NAME": {
             "selector": ".entry__name"
         },
+        "FC_RANK": {
+            "selector": ".entry__freecompany__info > li:nth-child(1) > span"
+        },
+        "FC_RANK_ICON": {
+            "selector": ".entry__freecompany__info > li:nth-child(1) > img",
+            "attribute": "src"
+        },
         "RANK": {
             "selector": ".entry__freecompany__info > .js__tooltip",
             "attribute": "data-tooltip",
