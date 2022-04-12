@@ -95,7 +95,7 @@
     },
     "SERVER": {
         "selector": "p.frame__chara__world:last-of-type",
-        "regex": "(?P<World>\\w*)\\s+\\((?P<DC>\\w*)\\)"
+        "regex": "(?P<World>\\w*)\\s+\\[(?P<DC>\\w*)\\]"
     },
     "TITLE": {
         "selector": ".frame__chara__title"
