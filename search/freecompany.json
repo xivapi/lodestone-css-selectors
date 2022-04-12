@@ -34,7 +34,7 @@
         },
         "SERVER": {
             "selector": ".entry__world:nth-child(3)",
-            "regex": "(?P<World>\\w*)\\s+\\((?P<DC>\\w*)\\)"
+            "regex": "(?P<World>\\w*)\\s+\\[(?P<DC>\\w*)\\]"
         },
         "ACTIVE": {
             "selector": "li.entry__freecompany__fc-active:nth-child(4)",
