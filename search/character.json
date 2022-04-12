@@ -33,7 +33,7 @@
         },
         "SERVER": {
             "selector": ".entry__world",
-            "regex": "(?P<World>\\w*)\\s+\\((?P<DC>\\w*)\\)"
+            "regex": "(?P<World>\\w*)\\s+\\[(?P<DC>\\w*)\\]"
         }
     },
     "LIST_NEXT_BUTTON": {
