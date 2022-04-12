@@ -17,7 +17,7 @@
         },
         "SERVER": {
             "selector": ".entry__world",
-            "regex": "(?P<World>\\w*)\\s+\\((?P<DC>\\w*)\\)"
+            "regex": "(?P<World>\\w*)\\s+\\[(?P<DC>\\w*)\\]"
         },
         "ACTIVE_MEMBERS": {
             "selector": ".entry__linkshell__member > div > span"
