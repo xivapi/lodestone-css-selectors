@@ -1,10 +1,10 @@
 {
     "ACTIVE_STATE": {
-        "selector": "p.freecompany__text:nth-child(3)",
+        "selector": "p.freecompany__text:nth-of-type(1)",
         "regex": "\\s*(?P<ActiveState>\\S+\\s?\\S*)"
     },
     "ACTIVE_MEMBER_COUNT": {
-        "selector": "p.freecompany__text:nth-child(12)"
+        "selector": "p.freecompany__text:nth-of-type(6)"
     },
     "CREST_LAYERS": {
         "BOTTOM": {
@@ -23,7 +23,7 @@
     "ESTATE": {
         "NO_ESTATE": {
             "selector": ".freecompany__estate__none"
-        },  
+        },
         "GREETING": {
             "selector": ".freecompany__estate__greeting"
         },
@@ -35,7 +35,7 @@
         }
     },
     "FORMED": {
-        "selector": "p.freecompany__text:nth-child(10) > script",
+        "selector": "p.freecompany__text:nth-of-type(5) > script",
         "regex": ".*ldst_strftime\\((?P<Timestamp>\\d*)"
     },
     "GRAND_COMPANY": {
@@ -51,7 +51,7 @@
         "selector": ".freecompany__text__name"
     },
     "RANK": {
-        "selector": "p.freecompany__text:nth-child(14)"
+        "selector": "p.freecompany__text:nth-of-type(7)"
     },
     "RANKING": {
         "WEEKLY": {
