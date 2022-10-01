@@ -94,7 +94,7 @@
         "regex": "(?P<Race>.*)<br\\/?>(?P<Tribe>.*) \\/ (?P<Gender>.)"
     },
     "SERVER": {
-        "selector": "p.frame__chara__world:last-of-type",
+        "selector": "p.frame__chara__world",
         "regex": "(?P<World>\\w*)\\s+\\[(?P<DC>\\w*)\\]"
     },
     "TITLE": {
