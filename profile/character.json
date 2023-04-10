@@ -36,11 +36,11 @@
                 "attribute": "src"
             },
             "MIDDLE": {
-                "selector": "div.character__freecompany__crest > div > img:nth-child(1)",
+                "selector": "div.character__freecompany__crest > div > img:nth-child(2)",
                 "attribute": "src"
             },
             "TOP": {
-                "selector": "div.character__freecompany__crest > div > img:nth-child(1)",
+                "selector": "div.character__freecompany__crest > div > img:nth-child(3)",
                 "attribute": "src"
             }
         }
