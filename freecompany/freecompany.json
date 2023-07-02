@@ -1,6 +1,6 @@
 {
     "ACTIVE_STATE": {
-        "selector": "p.freecompany__text:nth-of-type(1)",
+        "selector": "p.freecompany__text:nth-of-type(1):not(.freecompany__text__message)",
         "regex": "\\s*(?P<ActiveState>\\S+\\s?\\S*)"
     },
     "ACTIVE_MEMBER_COUNT": {
