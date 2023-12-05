@@ -25,10 +25,13 @@
         }
     },
     "FREE_COMPANY": {
-        "NAME": {
+        "ID": {
             "selector": ".character__freecompany__name > h4:nth-child(2) > a:nth-child(1)",
             "attribute": "href",
             "regex": "/lodestone/freecompany/(?P<ID>.+)/"
+        },
+        "NAME": {
+            "selector": ".character__freecompany__name > h4:nth-child(2) > a:nth-child(1)"
         },
         "ICON_LAYERS": {
             "BOTTOM": {
