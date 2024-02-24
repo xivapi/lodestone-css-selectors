@@ -37,6 +37,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--0 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "OFFHAND": {
@@ -77,6 +80,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--1 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "HEAD": {
@@ -117,6 +123,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--2 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "BODY": {
@@ -157,6 +166,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--3 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "HANDS": {
@@ -197,6 +209,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--4 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "WAIST": {
@@ -237,6 +252,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--5 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "LEGS": {
@@ -277,6 +295,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--6 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "FEET": {
@@ -317,6 +338,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--7 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "EARRINGS": {
@@ -357,6 +381,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "NECKLACE": {
@@ -397,6 +424,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--9 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "BRACELETS": {
@@ -437,6 +467,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--10 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "RING1": {
@@ -477,6 +510,9 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--11 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "RING2": {
@@ -517,11 +553,17 @@
         },
         "CREATOR_NAME": {
             "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > a:nth-child(1)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--12 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     },
     "SOULCRYSTAL": {
         "NAME": {
             "selector": ".icon-c--13 > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)"
+        },
+        "CLASS_LIST": {
+            "selector": ".icon-c--13 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1)"
         }
     }
 }
