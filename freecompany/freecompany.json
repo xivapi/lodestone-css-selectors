@@ -64,7 +64,7 @@
         }
     },
     "RECRUITMENT": {
-        "selector": "p.freecompany__text:nth-child(5)",
+        "selector": "p.freecompany__text:nth-child(5):not(.freecompany__text__message)",
         "regex": "\\s*(?P<ActiveState>\\S*)"
     },
     "SERVER": {
