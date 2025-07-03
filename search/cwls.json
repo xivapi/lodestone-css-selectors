@@ -23,7 +23,7 @@
         }
     },
     "PAGE_INFO": {
-        "selector": "ul.btn__pager:nth-child(6) > li:nth-child(3)",
+        "selector": "ul.btn__pager > li:nth-child(3)",
         "regex": "\\D*(?P<CurrentPage>\\d+)\\D*(?P<NumPages>\\d+)"
     },
     "LIST_NEXT_BUTTON": {
