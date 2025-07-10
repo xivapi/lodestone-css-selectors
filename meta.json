@@ -20,8 +20,8 @@
         "profile/character.json": "https://%s.finalfantasyxiv.com/lodestone/character/%d/",
         "profile/classjob.json": "https://%s.finalfantasyxiv.com/lodestone/character/%d/class_job/",
         "profile/gearset.json": "https://%s.finalfantasyxiv.com/lodestone/character/%d/",
-        "profile/minion.json": "https://%s.finalfantasyxiv.com/lodestone/character/%d/",
-        "profile/mount.json": "https://%s.finalfantasyxiv.com/lodestone/character/%d/",
+        "profile/minion.json": "https://%s.finalfantasyxiv.com/lodestone/character/%d/minion/",
+        "profile/mount.json": "https://%s.finalfantasyxiv.com/lodestone/character/%d/mount/",
 
         "pvpteam/members.json": "https://%s.finalfantasyxiv.com/lodestone/pvpteam/%s/",
         "pvpteam/pvpteam.json": "https://%s.finalfantasyxiv.com/lodestone/pvpteam/%s/",

@@ -3,7 +3,7 @@ CSS selectors for The Lodestone. These selectors are all made for non-browser cl
 due to DOM elements being injected by the browser itself. Please test them in a parser before reporting any errors.
 
 ## Character Profile
-Do note that in Firefox, some page elements are slightly different from in other browsers. Use no user agent or try the provided ones in `meta.json`.
+Do note that in Firefox, some page elements are slightly different from in other browsers. Use no user agent or try the provided ones in `meta.json`, for the most accurate results against the selectors it is recommended to use the value of `userAgentMobile`.
 
 ### Character info (`profile/character.json`)
 Basic character data is on the main profile page.
