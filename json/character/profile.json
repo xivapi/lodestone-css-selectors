@@ -1,0 +1,237 @@
+{
+  "attributes": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "selector": "table.character__param__list tr",
+    "regex": "^(?<type>\\D+)(?<value>\\d+)"
+  },
+  "profile": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "selector": "p.frame__chara__name"
+      },
+      "avatar": {
+        "type": "string",
+        "format": "uri",
+        "selector": "div.frame__chara__face > img",
+        "attribute": "src"
+      },
+      "portrait": {
+        "type": "string",
+        "format": "uri",
+        "selector": "div.character__detail__image img",
+        "attribute": "src"
+      },
+      "server": {
+        "selector": "p.frame__chara__world",
+        "regex": "^(?<world>.+?)\\s*\\[(?<dc>.*?)\\]$",
+        "type": "object",
+        "properties": {
+          "world": {
+            "type": "string"
+          },
+          "dc": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "world",
+          "dc"
+        ],
+        "additionalProperties": false
+      },
+      "title": {
+        "type": "string",
+        "selector": "p.frame__chara__title"
+      },
+      "bio": {
+        "default": "-",
+        "selector": "div.character__selfintroduction",
+        "type": "string"
+      },
+      "lore": {
+        "selector": "div.character-block:first-of-type p.character-block__name",
+        "regex": "^(?<race>Hyur|Elezen|Lalafell|Miqo'te|Roegadyn|Au Ra|Hrothgar|Viera)<br>(?<clan>Midlander|Highlander|Wildwood|Duskwight|Plainsfolk|Dunesfolk|Seeker of the Sun|Keeper of the Moon|Sea Wolf|Hellsguard|Raen|Xaela|Helions|The Lost|Rava|Veena) / (?<gender>\\W)",
+        "type": "object",
+        "properties": {
+          "race": {
+            "type": "string"
+          },
+          "clan": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "race",
+          "clan",
+          "gender"
+        ],
+        "additionalProperties": false
+      },
+      "nameday": {
+        "type": "string",
+        "selector": "p.character-block__birth"
+      },
+      "guardian": {
+        "type": "string",
+        "selector": "div.character-block:nth-child(2) p.character-block__name"
+      },
+      "citystate": {
+        "type": "string",
+        "selector": "div.character-block:nth-child(3) p.character-block__name"
+      },
+      "grand_company": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "selector": "div.character__profile__data__detail > div:nth-of-type(4) p.character-block__name",
+            "regex": "(\\w+) \\/ \\w+",
+            "type": "string"
+          },
+          "rank": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "selector": "div.character__profile__data__detail > div:nth-of-type(4) p.character-block__name",
+                "regex": "\\w+ \\/ (\\w+)",
+                "type": "string"
+              },
+              "icon": {
+                "type": "string",
+                "format": "uri",
+                "selector": "div.character__profile__data__detail > div:nth-of-type(4) > img",
+                "attribute": "src"
+              }
+            },
+            "required": [
+              "name",
+              "icon"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "name",
+          "rank"
+        ],
+        "additionalProperties": false
+      },
+      "free_company": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "selector": "div.character__freecompany__name a",
+            "attribute": "href",
+            "regex": "lodestone\\/freecompany\\/(\\S+)\\/",
+            "type": "string"
+          },
+          "name": {
+            "type": "string",
+            "selector": "div.character__freecompany__name a"
+          },
+          "crest": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            },
+            "selector": "div.character__freecompany__crest__image > img",
+            "attribute": "src"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "crest"
+        ],
+        "additionalProperties": false
+      },
+      "pvp_team": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "selector": "div.character__pvpteam__name a",
+            "attribute": "href",
+            "regex": "lodestone\\/pvpteam\\/(\\S+)\\/",
+            "type": "string"
+          },
+          "name": {
+            "type": "string",
+            "selector": "div.character__pvpteam__name a"
+          },
+          "crest": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            },
+            "selector": "div.character__pvpteam__crest img",
+            "attribute": "src"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "crest"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "name",
+      "avatar",
+      "server",
+      "title",
+      "bio",
+      "lore",
+      "nameday",
+      "guardian",
+      "citystate"
+    ],
+    "additionalProperties": false
+  },
+  "stats": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "selector": "div.character__param > ul div",
+    "regex": "([A-Z]{2})(\\d+)"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "members": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "selector": "a.entry__bg",
+          "attribute": "href",
+          "regex": "(\\d+)",
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "selector": "p.entry__name"
+        },
+        "avatar": {
+          "type": "string",
+          "format": "uri",
+          "selector": "div.entry__chara__face > img",
+          "attribute": "src"
+        },
+        "server": {
+          "selector": "p.entry__world",
+          "type": "object",
+          "properties": {
+            "world": {
+              "type": "string"
+            },
+            "dc": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "world",
+            "dc"
+          ],
+          "additionalProperties": false
+        },
+        "rank": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "selector": "ul.entry__freecompany__info > li:first-of-type > span"
+            },
+            "icon": {
+              "type": "string",
+              "format": "uri",
+              "selector": "ul.entry__freecompany__info > li:first-of-type > img",
+              "attribute": "src"
+            }
+          },
+          "required": [
+            "name",
+            "icon"
+          ],
+          "additionalProperties": false
+        },
+        "grand_company": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "selector": "li.js__tooltip",
+              "attribute": "data-tooltip",
+              "type": "string"
+            },
+            "rank": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "selector": "li.js__tooltip",
+                  "attribute": "data-tooltip",
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string",
+                  "format": "uri",
+                  "selector": "li.js__tooltip > img",
+                  "attribute": "src"
+                }
+              },
+              "required": [
+                "name",
+                "icon"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name",
+            "rank"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "avatar",
+        "server",
+        "rank"
+      ],
+      "additionalProperties": false
+    },
+    "selector": "div.ldst__window li.entry"
+  }
+}

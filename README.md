@@ -1,57 +1,33 @@
-# lodestone-css-selectors
-CSS selectors for The Lodestone. These selectors are all made for non-browser clients; they may break in various browsers
-due to DOM elements being injected by the browser itself. Please test them in a parser before reporting any errors.
+# Lodestone CSS Selectors
 
-## Character Profile
-Do note that in Firefox, some page elements are slightly different from in other browsers. Use no user agent or try the provided ones in `meta.json`, for the most accurate results against the selectors it is recommended to use the value of `userAgentMobile`.
+A ready-to-use collection of CSS selectors and Zod schemas for scraping data from the Final Fantasy XIV Lodestone. Designed for fast, lightweight parsing across TypeScript, Python, Go, Rust, and other languages.
 
-### Character info (`profile/character.json`)
-Basic character data is on the main profile page.
+> [!IMPORTANT]
+> [The Lodestone](https://na.finalfantasyxiv.com/lodestone/) serves completely different markup to desktop and mobile clients. These selectors are strictly tailored to the mobile DOM structure and will not match desktop responses.
 
-### Attributes (`profile/attributes.json`)
-Attribute data is on the main profile page.
+### Key Features
 
-### Gearset (`profile/gearset.json`)
-Gearset data is on the main profile page.
+- **Mobile DOM Tailored:** Built explicitly for the Lodestone's mobile views, which offer a cleaner and more consistent layout for scraping.
+- **Type Safety & Portability:** Schemas are written in Zod for native TypeScript support and automatically compiled into standard JSON Schemas for non-TypeScript environments.
+- **Lightweight & DOMless:** Fully compatible with fast HTML parsers (such as Cheerio, Happy DOM, or BeautifulSoup) without requiring a heavy, headless browser instance.
 
-### Classjobs (`profile/classjob.json`)
-Classjob data is on the `/class_job` endpoint.
+## Quick Start
 
-### Mounts/Minions (`profile/minion.json` and `profile/mount.json`)
-Mount and minion data are on their own `/mount` and `/minion` endpoints, and need to be scraped using a mobile user agent. With a desktop UA, the mount/minion names are
-injected into the page with AJAX, and separate requests need to be made to get every single one.
+Add this repository to your project to keep selectors updated without manual file management:
 
-### Achievements (`profile/achievements.json`)
-Achievements are on the `/achievement` endpoint. Use the list selector to get the list of achievements on the page, and then get their IDs from the `href` attribute
-of the link. Use the next button's selector to request the next page and scrape the next set of achievements until the href is `javascript:void(0);`.
-
-## Types
-
-All selectors are accompanied by a `type` field, which specifies what the expected type is for the field. At current, only the following types are used:
-
-| Name      | Description                                                                           |
-| --------- | ------------------------------------------------------------------------------------- |
-| `integer` | The type is an integer                                                                |
-| `string`  | The type is a string                                                                  |
-| `boolean` | The type is expected to be `true` if the selector returns a result; `false` otherwise |
-
-There are two formats for type:
-
-* Common form - the selector is of this type
-
-```json
-{
-    "type": "integer"
-}
+```sh
+git submodule add https://github.com/xivapi/lodestone-css-selectors.git <path>
 ```
 
-* Multiple value form - the selector results in multiple named values; this is only used with regex selectors that have named groups
+(For details on managing submodules, see the [Official Git Submodules Documentation](https://git-scm.com/book/en/v2/Git-Tools-Submodules)).
 
-```json
-{
-    "type": {
-        "Server": "string",
-        "DC": "string"
-    }
-}
-```
+## Project Lineage
+
+This repository inherits its design from [miichom/lodestone](https://github.com/miichom/lodestone) (now merged into [xivapi/nodestone](https://github.com/xivapi/nodestone)).
+
+## Contributing
+
+Contributions are welcome! If you want to update or add new selectors, simply submit a Pull Request with your changes to the TypeScript/Zod source schemas.
+
+> [!NOTE]
+> You don't need to manually recompile the JSON output. The CI pipeline generates and commits the updated JSON files automatically when merged.

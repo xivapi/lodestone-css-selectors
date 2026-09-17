@@ -1,0 +1,241 @@
+{
+  "profile": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "selector": "p.freecompany__text__name"
+      },
+      "server": {
+        "selector": "p.entry__freecompany__gc:last-of-type",
+        "regex": "^(?<world>.+?)\\s*\\[(?<dc>.*?)\\]$",
+        "type": "object",
+        "properties": {
+          "world": {
+            "type": "string"
+          },
+          "dc": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "world",
+          "dc"
+        ],
+        "additionalProperties": false
+      },
+      "slogan": {
+        "type": "string",
+        "selector": "p.freecompany__text__message"
+      },
+      "tag": {
+        "selector": "p.freecompany__text__tag",
+        "regex": "«(\\S+)»",
+        "type": "string"
+      },
+      "formed_at": {
+        "selector": "p.freecompany__text > script",
+        "regex": "ldst_strftime\\((\\d+)",
+        "type": "string",
+        "format": "date-time"
+      },
+      "stats": {
+        "type": "object",
+        "properties": {
+          "members": {
+            "selector": "p.freecompany__text:nth-of-type(6)",
+            "regex": "(\\d+)",
+            "type": "number"
+          },
+          "rank": {
+            "selector": "p.freecompany__text:nth-of-type(7)",
+            "regex": "(\\d+)",
+            "type": "number"
+          },
+          "rankings": {
+            "type": "object",
+            "properties": {
+              "weekly": {
+                "selector": "table.character__ranking__data tr:nth-of-type(1) th",
+                "regex": "(\\d+)",
+                "type": "number"
+              },
+              "monthly": {
+                "selector": "table.character__ranking__data tr:nth-of-type(2) th",
+                "regex": "(\\d+)",
+                "type": "number"
+              }
+            },
+            "required": [
+              "weekly",
+              "monthly"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "members",
+          "rank",
+          "rankings"
+        ],
+        "additionalProperties": false
+      },
+      "grand_company": {
+        "type": "object",
+        "properties": {
+          "selected": {
+            "selector": "p.entry__freecompany__gc:first-of-type",
+            "regex": "^(\\D+) <\\D+>",
+            "type": "string"
+          },
+          "reputation": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "selector": "p.freecompany__reputation__gcname"
+                },
+                "icon": {
+                  "type": "string",
+                  "format": "uri",
+                  "selector": "div.freecompany__reputation__icon > img",
+                  "attribute": "src"
+                },
+                "rank": {
+                  "type": "string",
+                  "selector": "p.freecompany__reputation__rank"
+                }
+              },
+              "required": [
+                "name",
+                "icon",
+                "rank"
+              ],
+              "additionalProperties": false
+            },
+            "selector": "div.freecompany__reputation"
+          }
+        },
+        "required": [
+          "selected",
+          "reputation"
+        ],
+        "additionalProperties": false
+      },
+      "estate": {
+        "default": null,
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "selector": "p.freecompany__estate__name"
+              },
+              "address": {
+                "type": "string",
+                "selector": "p.freecompany__estate__text"
+              },
+              "greeting": {
+                "type": "string",
+                "selector": "p.freecompany__estate__greeting"
+              }
+            },
+            "required": [
+              "name",
+              "address",
+              "greeting"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "recruitment": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "string",
+            "selector": "div.ldst__window:last-of-type > p.freecompany__text:nth-of-type(1)"
+          },
+          "recruitment": {
+            "type": "string",
+            "selector": "div.ldst__window:last-of-type > p.freecompany__text:nth-of-type(2)"
+          },
+          "focus": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "selector": "p"
+                },
+                "icon": {
+                  "type": "string",
+                  "format": "uri",
+                  "selector": "div > img",
+                  "attribute": "src"
+                }
+              },
+              "required": [
+                "name",
+                "icon"
+              ],
+              "additionalProperties": false
+            },
+            "selector": "ul.freecompany__focus_icon:nth-of-type(1) > li:not([class*=\"off\"])"
+          },
+          "seeking": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "selector": "p"
+                },
+                "icon": {
+                  "type": "string",
+                  "format": "uri",
+                  "selector": "div > img",
+                  "attribute": "src"
+                }
+              },
+              "required": [
+                "name",
+                "icon"
+              ],
+              "additionalProperties": false
+            },
+            "selector": "ul.freecompany__focus_icon:nth-of-type(2) > li:not([class*=\"off\"])"
+          }
+        },
+        "required": [
+          "active",
+          "recruitment",
+          "focus",
+          "seeking"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "name",
+      "server",
+      "slogan",
+      "tag",
+      "formed_at",
+      "stats",
+      "grand_company",
+      "estate",
+      "recruitment"
+    ],
+    "additionalProperties": false
+  }
+}

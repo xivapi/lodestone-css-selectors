@@ -1,0 +1,110 @@
+{
+  "entries": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "selector": "a.entry__block",
+          "attribute": "href",
+          "regex": "lodestone\\/pvpteam\\/(\\S+)\\/",
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "selector": "p.entry__name"
+        },
+        "server": {
+          "type": "object",
+          "properties": {
+            "dc": {
+              "type": "string",
+              "selector": "p.entry__world"
+            }
+          },
+          "required": [
+            "dc"
+          ],
+          "additionalProperties": false
+        },
+        "crest": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "selector": "div.entry__pvpteam__search__crest__image > img",
+          "attribute": "src"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "server",
+        "crest"
+      ],
+      "additionalProperties": false
+    },
+    "selector": "div.ldst__window div.entry"
+  },
+  "query": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "q": {
+        "type": "string"
+      },
+      "cf_public": {
+        "type": "boolean"
+      },
+      "worldname": {
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "_region_1",
+              "_region_2",
+              "_region_3",
+              "_region_4"
+            ]
+          },
+          {
+            "type": "string",
+            "enum": [
+              "_dc_Aether",
+              "_dc_Crystal",
+              "_dc_Dynamis",
+              "_dc_Primal",
+              "_dc_Chaos",
+              "_dc_Light",
+              "_dc_Materia",
+              "_dc_Elemental",
+              "_dc_Gaia",
+              "_dc_Mana",
+              "_dc_Meteor"
+            ]
+          },
+          {
+            "type": "string",
+            "pattern": "^[A-Za-z]+$"
+          }
+        ]
+      },
+      "order": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 4
+      },
+      "page": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 20
+      }
+    },
+    "required": [
+      "q"
+    ],
+    "additionalProperties": false
+  }
+}

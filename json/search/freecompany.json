@@ -1,0 +1,201 @@
+{
+  "entries": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "selector": "a.entry__block",
+          "attribute": "href",
+          "regex": "(\\d+)",
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "selector": "p.entry__name"
+        },
+        "server": {
+          "selector": "p.entry__world:last-of-type",
+          "regex": "^(?<world>.+?)\\s*\\[(?<dc>.*?)\\]$",
+          "type": "object",
+          "properties": {
+            "world": {
+              "type": "string"
+            },
+            "dc": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "world",
+            "dc"
+          ],
+          "additionalProperties": false
+        },
+        "crest": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "selector": "div.entry__freecompany__crest__image > img",
+          "attribute": "src"
+        },
+        "grand_company": {
+          "type": "string",
+          "selector": "p.entry__world:first-of-type"
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "members": {
+              "type": "number",
+              "selector": "li.entry__freecompany__fc-member"
+            },
+            "estate": {
+              "type": "string",
+              "selector": "li.entry__freecompany__fc-housing"
+            },
+            "formed_at": {
+              "selector": "li.entry__freecompany__fc-day > script",
+              "regex": "ldst_strftime\\((\\d+)",
+              "type": "string",
+              "format": "date-time"
+            },
+            "active": {
+              "selector": "li.entry__freecompany__fc-active:nth-last-child(2)",
+              "regex": "^[^:]+:\\s*(.+)$",
+              "type": "string"
+            },
+            "recruitment": {
+              "selector": "li.entry__freecompany__fc-active:last-of-type",
+              "regex": "^[^:]+:\\s*(.+)$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "members",
+            "estate",
+            "formed_at",
+            "active",
+            "recruitment"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "server",
+        "crest",
+        "grand_company",
+        "details"
+      ],
+      "additionalProperties": false
+    },
+    "selector": "div.ldst__window div.entry"
+  },
+  "query": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "q": {
+        "type": "string"
+      },
+      "cf_public": {
+        "type": "boolean"
+      },
+      "worldname": {
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "_region_1",
+              "_region_2",
+              "_region_3",
+              "_region_4"
+            ]
+          },
+          {
+            "type": "string",
+            "enum": [
+              "_dc_Aether",
+              "_dc_Crystal",
+              "_dc_Dynamis",
+              "_dc_Primal",
+              "_dc_Chaos",
+              "_dc_Light",
+              "_dc_Materia",
+              "_dc_Elemental",
+              "_dc_Gaia",
+              "_dc_Mana",
+              "_dc_Meteor"
+            ]
+          },
+          {
+            "type": "string",
+            "pattern": "^[A-Za-z]+$"
+          }
+        ]
+      },
+      "character_count": {
+        "type": "string",
+        "enum": [
+          "1-10",
+          "11-30",
+          "31-50",
+          "51-"
+        ]
+      },
+      "activities": {
+        "type": "number",
+        "minimum": -1,
+        "maximum": 8
+      },
+      "roles": {
+        "type": "number",
+        "enum": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          -1
+        ]
+      },
+      "activetime": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 3
+      },
+      "join": {
+        "type": "boolean"
+      },
+      "house": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 2
+      },
+      "gcid": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 3
+      },
+      "order": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 6
+      },
+      "page": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 20
+      }
+    },
+    "required": [
+      "q"
+    ],
+    "additionalProperties": false
+  }
+}

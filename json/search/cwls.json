@@ -1,0 +1,114 @@
+{
+  "entries": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "selector": "a.entry__link--line",
+          "attribute": "href",
+          "regex": "lodestone\\/crossworld_linkshell\\/(\\S+)\\/",
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "selector": "p.entry__name"
+        },
+        "server": {
+          "type": "object",
+          "properties": {
+            "dc": {
+              "type": "string",
+              "selector": "p.entry__world"
+            }
+          },
+          "required": [
+            "dc"
+          ],
+          "additionalProperties": false
+        },
+        "members": {
+          "type": "number",
+          "selector": "div.entry__linkshell__member span"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "server",
+        "members"
+      ],
+      "additionalProperties": false
+    },
+    "selector": "div.ldst__window div.entry"
+  },
+  "query": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "q": {
+        "type": "string"
+      },
+      "cf_public": {
+        "type": "boolean"
+      },
+      "worldname": {
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "_region_1",
+              "_region_2",
+              "_region_3",
+              "_region_4"
+            ]
+          },
+          {
+            "type": "string",
+            "enum": [
+              "_dc_Aether",
+              "_dc_Crystal",
+              "_dc_Dynamis",
+              "_dc_Primal",
+              "_dc_Chaos",
+              "_dc_Light",
+              "_dc_Materia",
+              "_dc_Elemental",
+              "_dc_Gaia",
+              "_dc_Mana",
+              "_dc_Meteor"
+            ]
+          },
+          {
+            "type": "string",
+            "pattern": "^[A-Za-z]+$"
+          }
+        ]
+      },
+      "character_count": {
+        "type": "string",
+        "enum": [
+          "1-10",
+          "11-30",
+          "31-50",
+          "51-"
+        ]
+      },
+      "order": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 6
+      },
+      "page": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 20
+      }
+    },
+    "required": [
+      "q"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "gearset": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "db": {
+        "selector": "div.db-tooltip__bt_item_detail > a",
+        "attribute": "href",
+        "regex": "lodestone\\/playguide\\/db\\/(?<path>\\w+)\\/(?<id>\\S+)\\/",
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "name": {
+        "type": "string",
+        "selector": "h2.db-tooltip__item__name"
+      },
+      "category": {
+        "type": "string",
+        "selector": "p.db-tooltip__item__category"
+      },
+      "ilvl": {
+        "selector": "div.db-tooltip__item__level",
+        "regex": "(?<level>\\d+)",
+        "type": "number"
+      },
+      "req": {
+        "type": "object",
+        "properties": {
+          "class": {
+            "selector": "div.db-tooltip__item_equipment__class",
+            "regex": "\\b[A-Z]{3} \\b",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "level": {
+            "selector": "div.db-tooltip__item_equipment__level",
+            "regex": "(\\d+)",
+            "type": "number"
+          }
+        },
+        "required": [
+          "class",
+          "level"
+        ],
+        "additionalProperties": false
+      },
+      "attributes": {
+        "type": "object",
+        "properties": {
+          "spec": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "type",
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "bonus": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "type",
+                "value"
+              ],
+              "additionalProperties": false
+            },
+            "selector": "ul.db-tooltip__basic_bonus > li",
+            "regex": "^(?<type>\\D+) (?<value>\\W\\d+)"
+          },
+          "effect": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "type",
+                "value"
+              ],
+              "additionalProperties": false
+            },
+            "selector": "div.db-view__series_bonus li",
+            "regex": "^(?<type>\\D+) (?<value>\\W\\d+)"
+          }
+        },
+        "required": [
+          "spec",
+          "bonus"
+        ],
+        "additionalProperties": false
+      },
+      "flags": {
+        "type": "object",
+        "properties": {
+          "repair": {
+            "type": "object",
+            "properties": {
+              "req": {
+                "selector": "ul.db-tooltip__item_repair > li:nth-of-type(3) > span:last-child",
+                "regex": "(?<class>\\D+) \\D+ (?<level>\\d+)",
+                "type": "object",
+                "properties": {
+                  "class": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "class",
+                  "level"
+                ],
+                "additionalProperties": false
+              },
+              "material": {
+                "type": "string",
+                "selector": "ul.db-tooltip__item_repair > li:nth-of-type(4) > span:last-child"
+              }
+            },
+            "required": [
+              "req",
+              "material"
+            ],
+            "additionalProperties": false
+          },
+          "extractable": {
+            "selector": "ul.db-tooltip__item-info__list > li:nth-of-type(1) > span",
+            "regex": "\\b(?:yes|ja|oui|はい)\\b|○",
+            "type": "boolean"
+          },
+          "projectable": {
+            "selector": "ul.db-tooltip__item-info__list > li:nth-of-type(2) > span",
+            "regex": "\\b(?:yes|ja|oui|はい)\\b|○",
+            "type": "boolean"
+          },
+          "desynthesizable": {
+            "selector": "ul.db-tooltip__item-info__list > li:nth-of-type(3) > span",
+            "regex": "\\b(?:yes|ja|oui|はい)\\b|○",
+            "type": "boolean"
+          },
+          "dyeable": {
+            "selector": "ul.db-tooltip__item-info__list > li:nth-of-type(4) > span",
+            "regex": "\\b(?:yes|ja|oui|はい)\\b|○",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "repair",
+          "extractable",
+          "projectable",
+          "desynthesizable",
+          "dyeable"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "db",
+      "name",
+      "category",
+      "ilvl",
+      "req",
+      "attributes",
+      "flags"
+    ],
+    "additionalProperties": false
+  }
+}

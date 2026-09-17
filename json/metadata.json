@@ -1,0 +1,20 @@
+{
+  "version": "0.52.1",
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Android 16; Mobile; rv:147.0) Gecko/147.0 Firefox/147.0 (Compatible; lodestone-css-selectors/0.52.1; +https://github.com/xivapi/lodestone-css-selectors)"
+  },
+  "endpoints": {
+    "/character/profile.json": "https://%s.finalfantasyxiv.com/lodestone/character/%d/",
+    "/character/gearset.json": "https://%s.finalfantasyxiv.com/lodestone/character/%d/equipment/tooltip/%d/",
+    "/cwls/profile.json": "https://%s.finalfantasyxiv.com/lodestone/crossworld_linkshell/%s/",
+    "/freecompany/profile.json": "https://%s.finalfantasyxiv.com/lodestone/freecompany/%d/",
+    "/freecompany/members.json": "https://%s.finalfantasyxiv.com/lodestone/freecompany/%d/member/",
+    "/linkshell/profile.json": "https://%s.finalfantasyxiv.com/lodestone/linkshell/%d/",
+    "/pvpteam/profile.json": "https://%s.finalfantasyxiv.com/lodestone/pvpteam/%s/",
+    "/search/character.json": "https://%s.finalfantasyxiv.com/lodestone/character/",
+    "/search/cwls.json": "https://%s.finalfantasyxiv.com/lodestone/crossworld_linkshell/",
+    "/search/freecompany.json": "https://%s.finalfantasyxiv.com/lodestone/freecompany/",
+    "/search/linkshell.json": "https://%s.finalfantasyxiv.com/lodestone/linkshell/",
+    "/search/pvpteam.json": "https://%s.finalfantasyxiv.com/lodestone/pvpteam/"
+  }
+}

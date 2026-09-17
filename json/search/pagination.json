@@ -1,0 +1,42 @@
+{
+  "pagination": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "start": {
+        "type": "string",
+        "selector": "a.btn__pager__prev--all"
+      },
+      "previous": {
+        "type": "string",
+        "selector": "a.btn__pager__prev"
+      },
+      "current": {
+        "selector": "a.btn__pager__current",
+        "type": "number"
+      },
+      "pages": {
+        "selector": "a.btn__pager__current",
+        "type": "number"
+      },
+      "next": {
+        "type": "string",
+        "selector": "a.btn__pager__next"
+      },
+      "end": {
+        "type": "string",
+        "selector": "a.btn__pager__next--all"
+      }
+    },
+    "required": [
+      "start",
+      "previous",
+      "current",
+      "pages",
+      "next",
+      "end"
+    ],
+    "additionalProperties": false,
+    "selector": "ul.btn__pager"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "entries": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "selector": "a.entry__link",
+          "attribute": "href",
+          "regex": "(\\d+)",
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "selector": "p.entry__name"
+        },
+        "avatar": {
+          "type": "string",
+          "format": "uri",
+          "selector": "div.entry__chara__face > img",
+          "attribute": "src"
+        },
+        "server": {
+          "selector": "p.entry__world",
+          "regex": "^(?<world>.+?)\\s*\\[(?<dc>.*?)\\]$",
+          "type": "object",
+          "properties": {
+            "world": {
+              "type": "string"
+            },
+            "dc": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "world",
+            "dc"
+          ],
+          "additionalProperties": false
+        },
+        "languages": {
+          "selector": "div.entry__chara__lang",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "grand_company": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "selector": "li.js__tooltip",
+              "attribute": "data-tooltip",
+              "type": "string"
+            },
+            "rank": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "selector": "li.js__tooltip",
+                  "attribute": "data-tooltip",
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string",
+                  "format": "uri",
+                  "selector": "li.js__tooltip > img",
+                  "attribute": "src"
+                }
+              },
+              "required": [
+                "name",
+                "icon"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name",
+            "rank"
+          ],
+          "additionalProperties": false
+        },
+        "free_company": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "selector": "a.entry__freecompany__link",
+              "attribute": "href",
+              "regex": "lodestone\\/freecompany\\/(\\d+)\\/",
+              "type": "string"
+            },
+            "name": {
+              "type": "string",
+              "selector": "a.entry__freecompany__link > span"
+            },
+            "crest": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "selector": "a.entry__freecompany__link > img",
+              "attribute": "src"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "crest"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "avatar",
+        "server",
+        "languages"
+      ],
+      "additionalProperties": false
+    },
+    "selector": "div.ldst__window div.entry"
+  },
+  "query": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "q": {
+        "type": "string"
+      },
+      "worldname": {
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "_region_1",
+              "_region_2",
+              "_region_3",
+              "_region_4"
+            ]
+          },
+          {
+            "type": "string",
+            "enum": [
+              "_dc_Aether",
+              "_dc_Crystal",
+              "_dc_Dynamis",
+              "_dc_Primal",
+              "_dc_Chaos",
+              "_dc_Light",
+              "_dc_Materia",
+              "_dc_Elemental",
+              "_dc_Gaia",
+              "_dc_Mana",
+              "_dc_Meteor"
+            ]
+          },
+          {
+            "type": "string",
+            "pattern": "^[A-Za-z]+$"
+          }
+        ]
+      },
+      "classjob": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^_class_(TANK|HEALER|DPS|CRAFTER|GATHERER)$"
+          },
+          {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 43
+          }
+        ]
+      },
+      "race_tribe": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^race_-?\\d+(?:\\.\\d+)?$"
+          },
+          {
+            "type": "string",
+            "pattern": "^tribe_-?\\d+(?:\\.\\d+)?$"
+          }
+        ]
+      },
+      "gcid": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 3
+      },
+      "blog_lang": {
+        "type": "string",
+        "enum": [
+          "ja",
+          "en",
+          "de",
+          "fr"
+        ]
+      },
+      "order": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 8
+      },
+      "page": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 20
+      }
+    },
+    "required": [
+      "q"
+    ],
+    "additionalProperties": false
+  }
+}
