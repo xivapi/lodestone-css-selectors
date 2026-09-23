@@ -286,6 +286,24 @@
             }
         }
     },
+    "BEASTMASTER": {
+        "LEVEL": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(2)",
+            "type": "integer"
+        },
+        "UNLOCKSTATE": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(3)",
+            "type": "string"
+        },
+        "EXP": {
+            "selector": "div.clearfix:nth-child(3) > div:nth-child(1) > ul:nth-child(2) > li:nth-child(7) > div:nth-child(4)",
+            "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)",
+            "type": {
+              "CurrentEXP": "integer",
+              "MaxEXP": "integer"
+            }
+        }
+    },
     "BARD": {
         "LEVEL": {
             "selector": "div.clearfix:nth-child(3) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > div:nth-child(2)",
