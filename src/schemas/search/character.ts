@@ -39,7 +39,7 @@ export const entries = z
         .transform((val) => val.match(/(\d+)/)?.[0].trim() ?? val.trim())
         .pipe(z.string())
         .meta({
-          selector: "a.entry__link",
+          selector: "a.entry__chara__link",
           attribute: "href",
           regex: /(\d+)/.source,
         }),
@@ -63,49 +63,6 @@ export const entries = z
         .transform((val) => val.split("/"))
         .pipe(z.array(z.string()))
         .meta({ selector: "div.entry__chara__lang" }),
-      grand_company: z
-        .object({
-          name: z
-            .string()
-            .transform((val) => val.split("/")[0]?.trim() ?? val.trim())
-            .pipe(z.string())
-            .meta({ selector: "li.js__tooltip", attribute: "data-tooltip" }),
-          rank: z.object({
-            name: z
-              .string()
-              .transform((val) => val.split("/")[1]?.trim() ?? val.trim())
-              .pipe(z.string())
-              .meta({ selector: "li.js__tooltip", attribute: "data-tooltip" }),
-            icon: z
-              .url()
-              .meta({ selector: "li.js__tooltip > img", attribute: "src" }),
-          }),
-        })
-        .optional(),
-      free_company: z
-        .object({
-          id: z
-            .string()
-            .transform(
-              (val) =>
-                val.match(/lodestone\/freecompany\/(\d+)\//)?.[1].trim() ??
-                val.trim()
-            )
-            .pipe(z.string())
-            .meta({
-              selector: "a.entry__freecompany__link",
-              attribute: "href",
-              regex: /lodestone\/freecompany\/(\d+)\//.source,
-            }),
-          name: z
-            .string()
-            .meta({ selector: "a.entry__freecompany__link > span" }),
-          crest: z.array(z.url()).meta({
-            selector: "a.entry__freecompany__link > img",
-            attribute: "src",
-          }),
-        })
-        .optional(),
     })
   )
-  .meta({ selector: "div.ldst__window div.entry" });
+  .meta({ selector: "div.characters > div" });

@@ -1,7 +1,7 @@
 import * as z from "zod/v4";
 
 export const profile = z.object({
-  name: z.string().meta({ selector: "h3.heading__linkshell__name" }),
+  name: z.string().meta({ selector: "p.frame__chara__name" }),
   server: z
     .string()
     .regex(/^(?<world>.+?)\s*\[(?<dc>.*?)\]$/)
@@ -11,7 +11,8 @@ export const profile = z.object({
     })
     .pipe(z.object({ world: z.string(), dc: z.string() }))
     .meta({
-      selector: "div.ls__member > div.entry:first-of-type p.entry__world",
+      selector:
+        "div.linkshell_characters > div.entry:first-of-type p.entry__world",
     }),
 });
 
@@ -44,50 +45,9 @@ export const members = z
         .object({
           name: z
             .string()
-            .meta({ selector: "div.entry__chara_info__linkshell > span" }),
+            .meta({ selector: "li.entry__chara_info__linkshell > span" }),
           icon: z.url().meta({
-            selector: "div.entry__chara_info__linkshell > img",
-            attribute: "src",
-          }),
-        })
-        .nullable()
-        .default(null),
-      grand_company: z
-        .object({
-          name: z
-            .string()
-            .transform((val) => val.split("/")[0]?.trim() ?? val.trim())
-            .pipe(z.string())
-            .meta({ selector: "li.js__tooltip", attribute: "data-tooltip" }),
-          rank: z.object({
-            name: z
-              .string()
-              .transform((val) => val.split("/")[1]?.trim() ?? val.trim())
-              .pipe(z.string())
-              .meta({ selector: "li.js__tooltip", attribute: "data-tooltip" }),
-            icon: z
-              .url()
-              .meta({ selector: "li.js__tooltip > img", attribute: "src" }),
-          }),
-        })
-        .nullable()
-        .default(null),
-      free_company: z
-        .object({
-          id: z
-            .string()
-            .transform((val) => val.match(/(\d+)/)?.[0].trim() ?? val.trim())
-            .pipe(z.string())
-            .meta({
-              selector: "a.entry__freecompany__link",
-              attribute: "href",
-              regex: /(\d+)/.source,
-            }),
-          name: z
-            .string()
-            .meta({ selector: "a.entry__freecompany__link > span" }),
-          crest: z.array(z.url()).meta({
-            selector: "a.entry__freecompany__link img",
+            selector: "li.entry__chara_info__linkshell > img",
             attribute: "src",
           }),
         })
@@ -95,4 +55,4 @@ export const members = z
         .default(null),
     })
   )
-  .meta({ selector: "div.ls__member > div.entry" });
+  .meta({ selector: "div.linkshell_characters > div.entry" });

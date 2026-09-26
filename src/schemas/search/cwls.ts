@@ -28,17 +28,15 @@ export const entries = z
         )
         .pipe(z.string())
         .meta({
-          selector: "a.entry__link--line",
+          selector: "a",
           attribute: "href",
           regex: /lodestone\/crossworld_linkshell\/(\S+)\//.source,
         }),
-      name: z.string().meta({ selector: "p.entry__name" }),
+      name: z.string().meta({ selector: "div > h4" }),
       server: z.object({
-        dc: z.string().meta({ selector: "p.entry__world" }),
+        dc: z.string().meta({ selector: "li:first-of-type" }),
       }),
-      members: z.coerce
-        .number()
-        .meta({ selector: "div.entry__linkshell__member span" }),
+      members: z.coerce.number().meta({ selector: "li:last-of-type > span" }),
     })
   )
-  .meta({ selector: "div.ldst__window div.entry" });
+  .meta({ selector: "div.linkshells > div" });

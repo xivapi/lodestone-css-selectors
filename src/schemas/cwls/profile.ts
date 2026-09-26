@@ -1,16 +1,9 @@
 import * as z from "zod/v4";
 
 export const profile = z.object({
-  name: z
-    .string()
-    .transform((val) => val.match(/(\D+)\s+/)?.[1].trim() ?? val.trim())
-    .pipe(z.string())
-    .meta({
-      selector: "h3.heading__linkshell__name",
-      regex: /(\D+)\s+/.source,
-    }),
+  name: z.string().meta({ selector: "p.frame__cwls__name" }),
   server: z.object({
-    dc: z.string().meta({ selector: "span.heading__cwls__dcname" }),
+    dc: z.string().meta({ selector: "span.frame__cwls__world" }),
   }),
   formed_at: z
     .string()
@@ -20,7 +13,7 @@ export const profile = z.object({
     })
     .pipe(z.coerce.date())
     .meta({
-      selector: "span.heading__cwls__formed > script",
+      selector: "span.frame__cwls__formed > script",
       regex: /ldst_strftime\((\d+)/.source,
     }),
 });
@@ -33,7 +26,7 @@ export const members = z
         .transform((val) => val.match(/(\d+)/)?.[0].trim() ?? val.trim())
         .pipe(z.string())
         .meta({
-          selector: "a.entry__bg",
+          selector: "a.cf-member-list",
           attribute: "href",
           regex: /(\d+)/.source,
         }),
@@ -54,50 +47,9 @@ export const members = z
         .object({
           name: z
             .string()
-            .meta({ selector: "div.entry__chara_info__linkshell > span" }),
+            .meta({ selector: "li.entry__chara_info__linkshell > span" }),
           icon: z.url().meta({
-            selector: "div.entry__chara_info__linkshell > img",
-            attribute: "src",
-          }),
-        })
-        .nullable()
-        .default(null),
-      grand_company: z
-        .object({
-          name: z
-            .string()
-            .transform((val) => val.split("/")[0]?.trim() ?? val.trim())
-            .pipe(z.string())
-            .meta({ selector: "li.js__tooltip", attribute: "data-tooltip" }),
-          rank: z.object({
-            name: z
-              .string()
-              .transform((val) => val.split("/")[1]?.trim() ?? val.trim())
-              .pipe(z.string())
-              .meta({ selector: "li.js__tooltip", attribute: "data-tooltip" }),
-            icon: z
-              .url()
-              .meta({ selector: "li.js__tooltip > img", attribute: "src" }),
-          }),
-        })
-        .nullable()
-        .default(null),
-      free_company: z
-        .object({
-          id: z
-            .string()
-            .transform((val) => val.match(/(\d+)/)?.[0].trim() ?? val.trim())
-            .pipe(z.string())
-            .meta({
-              selector: "a.entry__freecompany__link",
-              attribute: "href",
-              regex: /(\d+)/.source,
-            }),
-          name: z
-            .string()
-            .meta({ selector: "a.entry__freecompany__link > span" }),
-          crest: z.array(z.url()).meta({
-            selector: "a.entry__freecompany__link img",
+            selector: "li.entry__chara_info__linkshell > img",
             attribute: "src",
           }),
         })
@@ -105,4 +57,4 @@ export const members = z
         .default(null),
     })
   )
-  .meta({ selector: "div.ls__member > div.entry" });
+  .meta({ selector: "div.linkshell_characters div.entry__bg" });

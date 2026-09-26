@@ -1,22 +1,22 @@
 import * as z from "zod/v4";
 
 export const profile = z.object({
-  name: z.string().meta({ selector: "p.freecompany__text__name" }),
+  name: z.string().meta({ selector: "h2.entry__name" }),
   server: z
     .string()
     .transform((val) => val.match(/^(?<world>.+?)\s*\[(?<dc>.*?)\]$/)?.groups)
     .pipe(z.object({ world: z.string(), dc: z.string() }))
     .meta({
-      selector: "p.entry__freecompany__gc:last-of-type",
+      selector: "p.entry__world:last-of-type",
       regex: /^(?<world>.+?)\s*\[(?<dc>.*?)\]$/.source,
     }),
-  slogan: z.string().meta({ selector: "p.freecompany__text__message" }),
+  slogan: z.string().meta({ selector: "p.freecompany__text:first-of-type" }),
   tag: z
     .string()
     .transform((val) => val.match(/«(\S+)»/)?.[1].trim() ?? val.trim())
     .pipe(z.string())
     .meta({
-      selector: "p.freecompany__text__tag",
+      selector: "p.freecompany__text > span.freecompany__text__tag",
       regex: /«(\S+)»/.source,
     }),
   formed_at: z
@@ -36,7 +36,7 @@ export const profile = z.object({
       .transform((val) => val.match(/(\d+)/)?.[1].trim() ?? val.trim())
       .pipe(z.coerce.number())
       .meta({
-        selector: "p.freecompany__text:nth-of-type(6)",
+        selector: "p.freecompany__text:nth-child(15)",
         regex: /(\d+)/.source,
       }),
     rank: z
@@ -44,7 +44,7 @@ export const profile = z.object({
       .transform((val) => val.match(/(\d+)/)?.[1].trim() ?? val.trim())
       .pipe(z.coerce.number())
       .meta({
-        selector: "p.freecompany__text:nth-of-type(7)",
+        selector: "p.freecompany__text:nth-child(17)",
         regex: /(\d+)/.source,
       }),
     rankings: z.object({
@@ -53,7 +53,7 @@ export const profile = z.object({
         .transform((val) => val.match(/(\d+)/)?.[1].trim() ?? val.trim())
         .pipe(z.coerce.number())
         .meta({
-          selector: "table.character__ranking__data tr:nth-of-type(1) th",
+          selector: "table.character__ranking__data tr:nth-child(1) > td",
           regex: /(\d+)/.source,
         }),
       monthly: z
@@ -61,7 +61,7 @@ export const profile = z.object({
         .transform((val) => val.match(/(\d+)/)?.[1].trim() ?? val.trim())
         .pipe(z.coerce.number())
         .meta({
-          selector: "table.character__ranking__data tr:nth-of-type(2) th",
+          selector: "table.character__ranking__data tr:nth-child(2) > td",
           regex: /(\d+)/.source,
         }),
     }),
@@ -72,30 +72,30 @@ export const profile = z.object({
       .transform((val) => val.match(/^(\D+) <\D+>/)?.[1].trim() ?? val.trim())
       .pipe(z.string())
       .meta({
-        selector: "p.entry__freecompany__gc:first-of-type",
+        selector: "p.entry__world:first-of-type",
         regex: /^(\D+) <\D+>/.source,
       }),
     reputation: z
       .array(
         z.object({
-          name: z.string().meta({
-            selector: "p.freecompany__reputation__gcname",
-          }),
+          name: z
+            .string()
+            .meta({ selector: "p.freecompany__reputation__gcname" }),
           icon: z.url().meta({
             selector: "div.freecompany__reputation__icon > img",
             attribute: "src",
           }),
-          rank: z.string().meta({
-            selector: "p.freecompany__reputation__rank",
-          }),
+          rank: z
+            .string()
+            .meta({ selector: "p.freecompany__reputation__rank" }),
         })
       )
       .meta({ selector: "div.freecompany__reputation" }),
   }),
   estate: z
     .object({
-      name: z.string().meta({ selector: "p.freecompany__estate__name" }),
-      address: z.string().meta({ selector: "p.freecompany__estate__text" }),
+      name: z.string().meta({ selector: "p.parts__text:nth-child(26)" }),
+      address: z.string().meta({ selector: "p.parts__text:nth-child(28)" }),
       greeting: z
         .string()
         .meta({ selector: "p.freecompany__estate__greeting" }),
@@ -103,14 +103,8 @@ export const profile = z.object({
     .nullable()
     .default(null),
   recruitment: z.object({
-    active: z.string().meta({
-      selector:
-        "div.ldst__window:last-of-type > p.freecompany__text:nth-of-type(1)",
-    }),
-    recruitment: z.string().meta({
-      selector:
-        "div.ldst__window:last-of-type > p.freecompany__text:nth-of-type(2)",
-    }),
+    active: z.string().meta({ selector: "p.freecompany__text:nth-child(33)" }),
+    recruitment: z.string().meta({ selector: "span.freecompany__recruitment" }),
     focus: z
       .array(
         z.object({
@@ -119,19 +113,15 @@ export const profile = z.object({
         })
       )
       .meta({
-        selector:
-          'ul.freecompany__focus_icon:nth-of-type(1) > li:not([class*="off"])',
+        selector: 'ul.freecompany__focus_icon > li:not([class*="off"])',
       }),
     seeking: z
       .array(
         z.object({
-          name: z.string().meta({ selector: "p" }),
-          icon: z.url().meta({ selector: "div > img", attribute: "src" }),
+          name: z.string().meta({ selector: "img", attribute: "alt" }),
+          icon: z.url().meta({ selector: "img", attribute: "src" }),
         })
       )
-      .meta({
-        selector:
-          'ul.freecompany__focus_icon:nth-of-type(2) > li:not([class*="off"])',
-      }),
+      .meta({ selector: "ul.freecompany__seeking_icon > li" }),
   }),
 });

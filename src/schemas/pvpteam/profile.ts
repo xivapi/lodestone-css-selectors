@@ -17,7 +17,7 @@ export const profile = z.object({
     })
     .pipe(z.coerce.date())
     .meta({
-      selector: "span.entry__pvpteam__data--formed > script",
+      selector: "p.entry__pvpteam__data--formed > script",
       regex: /ldst_strftime\((\d+)/.source,
     }),
 });
@@ -52,44 +52,19 @@ export const members = z
         .object({
           name: z.string().meta({
             selector:
-              "ul.entry__freecompany__info:not(:has(li:first-of-type > i.list__ic__class)) > li:first-of-type > span",
+              "ul.entry__pvpteam__member__info > li:not(:has(i.list__ic__class)):first-of-type > span",
           }),
           icon: z.url().meta({
             selector:
-              "ul.entry__freecompany__info:not(:has(li:first-of-type > i.list__ic__class)) > li:first-of-type > img",
+              "ul.entry__pvpteam__member__info > li:not(:has(i.list__ic__class)):first-of-type > img",
             attribute: "src",
           }),
         })
         .nullable()
         .default(null),
-      grand_company: z
-        .object({
-          name: z
-            .string()
-            .transform((val) => val.split("/")[0]?.trim() ?? val.trim())
-            .pipe(z.string())
-            .meta({
-              selector: "li.js__tooltip",
-              attribute: "data-tooltip",
-            }),
-          rank: z.object({
-            name: z
-              .string()
-              .transform((val) => val.split("/")[1]?.trim() ?? val.trim())
-              .pipe(z.string())
-              .meta({
-                selector: "li.js__tooltip",
-                attribute: "data-tooltip",
-              }),
-            icon: z
-              .url()
-              .meta({ selector: "li.js__tooltip > img", attribute: "src" }),
-          }),
-        })
-        .nullable()
-        .default(null),
       matches: z.coerce.number().default(0).meta({
-        selector: "ul.entry__freecompany__info > li:last-of-type > span",
+        selector:
+          "ul.entry__pvpteam__member__info > li:not(:has(i.list__ic__class)):last-of-type > span",
       }),
     })
   )

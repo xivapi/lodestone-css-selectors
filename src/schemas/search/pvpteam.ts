@@ -35,9 +35,9 @@ export const entries = z
         dc: z.string().meta({ selector: "p.entry__world" }),
       }),
       crest: z.array(z.url()).meta({
-        selector: "div.entry__pvpteam__search__crest__image > img",
+        selector: "div.entry__freecompany__crest__image > img",
         attribute: "src",
       }),
     })
   )
-  .meta({ selector: "div.ldst__window div.entry" });
+  .meta({ selector: "div.pvpteams > div" });

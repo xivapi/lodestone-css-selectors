@@ -27,11 +27,11 @@ export const entries = z
         )
         .pipe(z.string())
         .meta({
-          selector: "a.entry__link--line",
+          selector: "a",
           attribute: "href",
           regex: /lodestone\/linkshell\/(\d+)\//.source,
         }),
-      name: z.string().meta({ selector: "p.entry__name" }),
+      name: z.string().meta({ selector: "h4" }),
       server: z
         .string()
         .transform((val) => {
@@ -40,12 +40,12 @@ export const entries = z
         })
         .pipe(z.object({ world: z.string(), dc: z.string() }))
         .meta({
-          selector: "p.entry__world",
+          selector: "li.btn__icon__inner--left",
           regex: /^(?<world>.+?)\s*\[(?<dc>.*?)\]$/.source,
         }),
       members: z.coerce
         .number()
-        .meta({ selector: "div.entry__linkshell__member span" }),
+        .meta({ selector: "li.btn__icon__inner--right > span" }),
     })
   )
-  .meta({ selector: "div.ldst__window div.entry" });
+  .meta({ selector: "div.linkshells > div" });

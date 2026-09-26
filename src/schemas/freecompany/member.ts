@@ -27,35 +27,13 @@ export const members = z
         .meta({ selector: "p.entry__world" }),
       rank: z.object({
         name: z.string().meta({
-          selector: "ul.entry__freecompany__info > li:first-of-type > span",
+          selector: "ul.entry__chara_info > li:first-of-type > span",
         }),
         icon: z.url().meta({
-          selector: "ul.entry__freecompany__info > li:first-of-type > img",
+          selector: "ul.entry__chara_info > li:first-of-type > img",
           attribute: "src",
         }),
       }),
-      grand_company: z
-        .object({
-          name: z
-            .string()
-            .transform((val) => val.split("/")[0]?.trim() ?? val.trim())
-            .pipe(z.string())
-            .meta({ selector: "li.js__tooltip", attribute: "data-tooltip" }),
-          rank: z.object({
-            name: z
-              .string()
-              .transform((val) => val.split("/")[1]?.trim() ?? val.trim())
-              .pipe(z.string())
-              .meta({
-                selector: "li.js__tooltip",
-                attribute: "data-tooltip",
-              }),
-            icon: z
-              .url()
-              .meta({ selector: "li.js__tooltip > img", attribute: "src" }),
-          }),
-        })
-        .optional(),
     })
   )
-  .meta({ selector: "div.ldst__window li.entry" });
+  .meta({ selector: "div.freecompany_characters li.entry" });

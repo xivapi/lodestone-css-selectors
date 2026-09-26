@@ -61,48 +61,54 @@ export const entries = z
       }),
       grand_company: z
         .string()
-        .meta({ selector: "p.entry__world:first-of-type" }),
-      details: z.object({
-        members: z.coerce
-          .number()
-          .meta({ selector: "li.entry__freecompany__fc-member" }),
-        estate: z
-          .string()
-          .meta({ selector: "li.entry__freecompany__fc-housing" }),
-        formed_at: z
-          .string()
-          .transform((val) => {
-            const match = val.match(/ldst_strftime\((\d+)/);
-            return match ? parseInt(match[1], 10) * 1000 : val;
-          })
-          .pipe(z.coerce.date())
-          .meta({
-            selector: "li.entry__freecompany__fc-day > script",
-            regex: /ldst_strftime\((\d+)/.source,
-          }),
-        active: z
-          .string()
-          .transform((val) => {
-            const match = val.match(/^[^:]+:\s*(.+)$/);
-            return match ? match[1].trim() : val.trim();
-          })
-          .pipe(z.string())
-          .meta({
-            selector: "li.entry__freecompany__fc-active:nth-last-child(2)",
-            regex: /^[^:]+:\s*(.+)$/.source,
-          }),
-        recruitment: z
-          .string()
-          .transform((val) => {
-            const match = val.match(/^[^:]+:\s*(.+)$/);
-            return match ? match[1].trim() : val.trim();
-          })
-          .pipe(z.string())
-          .meta({
-            selector: "li.entry__freecompany__fc-active:last-of-type",
-            regex: /^[^:]+:\s*(.+)$/.source,
-          }),
-      }),
+        .transform(
+          (val) =>
+            val.match(/(?<name>\D+) <(?<rank>\D+)>/)?.groups ?? val.trim()
+        )
+        .pipe(z.object({ name: z.string(), rank: z.string() }))
+        .meta({
+          selector: "p.entry__world",
+          regex: /(?<name>\D+) <(?<rank>\D+)>/.source,
+        }),
+      active: z
+        .string()
+        .transform((val) => {
+          const match = val.match(/^[^:]+:\s*(.+)$/);
+          return match ? match[1].trim() : val.trim();
+        })
+        .pipe(z.string())
+        .meta({
+          selector: "ul.entry__freecompany__fc-active li:first-of-type",
+          regex: /^[^:]+:\s*(.+)$/.source,
+        }),
+      recruitment: z
+        .string()
+        .transform((val) => {
+          const match = val.match(/^[^:]+:\s*(.+)$/);
+          return match ? match[1].trim() : val.trim();
+        })
+        .pipe(z.string())
+        .meta({
+          selector: "ul.entry__freecompany__fc-active li:last-of-type",
+          regex: /^[^:]+:\s*(.+)$/.source,
+        }),
+      members: z.coerce
+        .number()
+        .meta({ selector: "li.entry__freecompany__fc-member" }),
+      estate: z
+        .string()
+        .meta({ selector: "li.entry__freecompany__fc-housing" }),
+      formed_at: z
+        .string()
+        .transform((val) => {
+          const match = val.match(/ldst_strftime\((\d+)/);
+          return match ? parseInt(match[1], 10) * 1000 : val;
+        })
+        .pipe(z.coerce.date())
+        .meta({
+          selector: "li.entry__freecompany__fc-day > script",
+          regex: /ldst_strftime\((\d+)/.source,
+        }),
     })
   )
-  .meta({ selector: "div.ldst__window div.entry" });
+  .meta({ selector: "div.freecompanies > div" });

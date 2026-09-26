@@ -1,25 +1,14 @@
 import * as z from "zod/v4";
 
-export const gearset = z.object({
-  db: z
+export const equipment = z.object({
+  name: z.string().meta({ selector: "h1.db-view__header__detail__item-name" }),
+  icon: z.url().meta({
+    selector: "img.db-view__header__item-image--icon",
+    attribute: "src",
+  }),
+  category: z
     .string()
-    .transform((val) => {
-      const groups = val.match(
-        /lodestone\/playguide\/db\/(?<path>\w+)\/(?<id>\S+)\//
-      )?.groups;
-      return {
-        path: groups?.path.trim() as string,
-        id: groups?.id.trim() as string,
-      };
-    })
-    .pipe(z.object({ path: z.string(), id: z.string() }))
-    .meta({
-      selector: "div.db-tooltip__bt_item_detail > a",
-      attribute: "href",
-      regex: /lodestone\/playguide\/db\/(?<path>\w+)\/(?<id>\S+)\//.source,
-    }),
-  name: z.string().meta({ selector: "h2.db-tooltip__item__name" }),
-  category: z.string().meta({ selector: "p.db-tooltip__item__category" }),
+    .meta({ selector: "h2.db-view__header__detail__category-name" }),
   ilvl: z
     .string()
     .transform(
@@ -27,16 +16,16 @@ export const gearset = z.object({
     )
     .pipe(z.coerce.number())
     .meta({
-      selector: "div.db-tooltip__item__level",
+      selector: "h3.db-view__item-level",
       regex: /(?<level>\d+)/.source,
     }),
-  req: z.object({
+  equip: z.object({
     class: z
       .string()
       .transform((val) => val.match(/\b[A-Z]{3}\b/g) ?? [val])
       .pipe(z.array(z.string()))
       .meta({
-        selector: "div.db-tooltip__item_equipment__class",
+        selector: "div.db-view__item-equip-text p:nth-of-type(1)",
         regex: /\b[A-Z]{3} \b/g.source,
       }),
     level: z
@@ -44,43 +33,32 @@ export const gearset = z.object({
       .transform((val) => val.match(/(\d+)/)?.[1].trim() ?? val.trim())
       .pipe(z.coerce.number())
       .meta({
-        selector: "div.db-tooltip__item_equipment__level",
+        selector: "div.db-view__item-equip-text p:nth-of-type(2)",
         regex: /(\d+)/.source,
       }),
   }),
   attributes: z.object({
-    spec: z
-      .object({
-        types: z
-          .array(z.string())
-          .meta({ selector: "div.db-tooltip__item_spec__name" }),
-        values: z
-          .array(z.coerce.number())
-          .meta({ selector: "div.db-tooltip__item_spec__value" }),
-      })
-      .transform((val) => {
-        return val.types.map((type, idx) => ({
-          type: type.trim(),
-          value: val.values[idx],
-        }));
-      })
-      .pipe(z.array(z.object({ type: z.string(), value: z.number() }))),
-    bonus: z
+    main: z
       .array(
-        z
-          .string()
-          .transform((val) => {
-            const groups = val.match(/^(?<type>\D+) (?<value>\W\d+)/)?.groups;
-            return {
-              type: groups?.type.trim() as string,
-              value: Number(groups?.value),
-            };
-          })
-          .pipe(z.object({ type: z.string(), value: z.number() }))
+        z.object({
+          type: z.string().meta({ selector: "dt" }),
+          value: z.coerce.number().meta({ selector: "dd" }),
+        })
       )
       .meta({
-        selector: "ul.db-tooltip__basic_bonus > li",
-        regex: /^(?<type>\D+) (?<value>\W\d+)/.source,
+        selector:
+          "div.db-view__item-info dl.db-view__item-info__list--main-status",
+      }),
+    bonus: z
+      .array(
+        z.object({
+          type: z.string().meta({ selector: "span.name" }),
+          value: z.coerce.number().meta({ selector: "span.value" }),
+        })
+      )
+      .meta({
+        selector:
+          "div.db-view__item-info ul.db-view__item-info__list--bonuses > li",
       }),
     effect: z
       .array(
@@ -101,6 +79,9 @@ export const gearset = z.object({
       })
       .optional(),
   }),
+  materia: z.array(z.object({})).optional().meta({
+    selector: "div.db-view__item-info ul.character-item__materia-list > li",
+  }),
   flags: z.object({
     repair: z.object({
       req: z
@@ -115,12 +96,12 @@ export const gearset = z.object({
         .pipe(z.object({ class: z.string(), level: z.number() }))
         .meta({
           selector:
-            "ul.db-tooltip__item_repair > li:nth-of-type(3) > span:last-child",
+            "div.db-view__item-info__table--craft_repair tr:nth-of-type(3) > td",
           regex: /(?<class>\D+) \D+ (?<level>\d+)/.source,
         }),
       material: z.string().meta({
         selector:
-          "ul.db-tooltip__item_repair > li:nth-of-type(4) > span:last-child",
+          "div.db-view__item-info__table--craft_repair tr:nth-of-type(4) > td",
       }),
     }),
     extractable: z
@@ -128,7 +109,8 @@ export const gearset = z.object({
       .transform((val) => /\b(?:yes|ja|oui|はい)\b|○/.test(val.toLowerCase()))
       .pipe(z.boolean())
       .meta({
-        selector: "ul.db-tooltip__item-info__list > li:nth-of-type(1) > span",
+        selector:
+          "ul.db-view__item-info__craft_repair > li:nth-of-type(1) > span",
         regex: /\b(?:yes|ja|oui|はい)\b|○/.source,
       }),
     projectable: z
@@ -136,7 +118,8 @@ export const gearset = z.object({
       .transform((val) => /\b(?:yes|ja|oui|はい)\b|○/.test(val.toLowerCase()))
       .pipe(z.boolean())
       .meta({
-        selector: "ul.db-tooltip__item-info__list > li:nth-of-type(2) > span",
+        selector:
+          "ul.db-view__item-info__craft_repair > li:nth-of-type(2) > span",
         regex: /\b(?:yes|ja|oui|はい)\b|○/.source,
       }),
     desynthesizable: z
@@ -144,7 +127,8 @@ export const gearset = z.object({
       .transform((val) => /\b(?:yes|ja|oui|はい)\b|○/.test(val.toLowerCase()))
       .pipe(z.boolean())
       .meta({
-        selector: "ul.db-tooltip__item-info__list > li:nth-of-type(3) > span",
+        selector:
+          "ul.db-view__item-info__craft_repair > li:nth-of-type(3) > span",
         regex: /\b(?:yes|ja|oui|はい)\b|○/.source,
       }),
     dyeable: z
@@ -152,7 +136,8 @@ export const gearset = z.object({
       .transform((val) => /\b(?:yes|ja|oui|はい)\b|○/.test(val.toLowerCase()))
       .pipe(z.boolean())
       .meta({
-        selector: "ul.db-tooltip__item-info__list > li:nth-of-type(4) > span",
+        selector:
+          "ul.db-view__item-info__craft_repair > li:nth-of-type(4) > span",
         regex: /\b(?:yes|ja|oui|はい)\b|○/.source,
       }),
   }),
