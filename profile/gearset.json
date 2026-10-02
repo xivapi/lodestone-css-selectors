@@ -551,6 +551,20 @@
             "type": "string"
         }
     },
+    "FACEWEAR": {
+        "NAME": {
+            "selector": ".icon-c--glasses > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
+            "type": "string"
+        },
+        "UNLOCKED_BY": {
+            "selector": ".icon-c--glasses > .db-tooltip > div:nth-child(1) > div:nth-child(2) > a:nth-child(2)",
+            "type": "string"
+        },
+        "DB_LINK": {
+            "selector": ".icon-c--glasses > .db-tooltip > div:nth-child(1) > div:nth-child(2) > a:nth-child(2)",
+            "type": "string"
+        }
+    },
     "EARRINGS": {
         "NAME": {
             "selector": ".icon-c--8 > .db-tooltip > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(2)",
