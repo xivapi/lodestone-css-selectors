@@ -6,7 +6,7 @@
       "type": "object",
       "properties": {
         "id": {
-          "selector": "a.entry__link",
+          "selector": "a.entry__chara__link",
           "attribute": "href",
           "regex": "(\\d+)",
           "type": "string"
@@ -45,72 +45,6 @@
           "items": {
             "type": "string"
           }
-        },
-        "grand_company": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "selector": "li.js__tooltip",
-              "attribute": "data-tooltip",
-              "type": "string"
-            },
-            "rank": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "selector": "li.js__tooltip",
-                  "attribute": "data-tooltip",
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string",
-                  "format": "uri",
-                  "selector": "li.js__tooltip > img",
-                  "attribute": "src"
-                }
-              },
-              "required": [
-                "name",
-                "icon"
-              ],
-              "additionalProperties": false
-            }
-          },
-          "required": [
-            "name",
-            "rank"
-          ],
-          "additionalProperties": false
-        },
-        "free_company": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "selector": "a.entry__freecompany__link",
-              "attribute": "href",
-              "regex": "lodestone\\/freecompany\\/(\\d+)\\/",
-              "type": "string"
-            },
-            "name": {
-              "type": "string",
-              "selector": "a.entry__freecompany__link > span"
-            },
-            "crest": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "selector": "a.entry__freecompany__link > img",
-              "attribute": "src"
-            }
-          },
-          "required": [
-            "id",
-            "name",
-            "crest"
-          ],
-          "additionalProperties": false
         }
       },
       "required": [
@@ -122,7 +56,7 @@
       ],
       "additionalProperties": false
     },
-    "selector": "div.ldst__window div.entry"
+    "selector": "div.characters > div"
   },
   "query": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",

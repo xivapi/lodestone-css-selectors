@@ -6,21 +6,21 @@
       "type": "object",
       "properties": {
         "id": {
-          "selector": "a.entry__link--line",
+          "selector": "a",
           "attribute": "href",
           "regex": "lodestone\\/crossworld_linkshell\\/(\\S+)\\/",
           "type": "string"
         },
         "name": {
           "type": "string",
-          "selector": "p.entry__name"
+          "selector": "div > h4"
         },
         "server": {
           "type": "object",
           "properties": {
             "dc": {
               "type": "string",
-              "selector": "p.entry__world"
+              "selector": "li:first-of-type"
             }
           },
           "required": [
@@ -30,7 +30,7 @@
         },
         "members": {
           "type": "number",
-          "selector": "div.entry__linkshell__member span"
+          "selector": "li:last-of-type > span"
         }
       },
       "required": [
@@ -41,7 +41,7 @@
       ],
       "additionalProperties": false
     },
-    "selector": "div.ldst__window div.entry"
+    "selector": "div.linkshells > div"
   },
   "query": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",

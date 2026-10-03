@@ -5,10 +5,10 @@
     "properties": {
       "name": {
         "type": "string",
-        "selector": "p.freecompany__text__name"
+        "selector": "h2.entry__name"
       },
       "server": {
-        "selector": "p.entry__freecompany__gc:last-of-type",
+        "selector": "p.entry__world:last-of-type",
         "regex": "^(?<world>.+?)\\s*\\[(?<dc>.*?)\\]$",
         "type": "object",
         "properties": {
@@ -27,10 +27,10 @@
       },
       "slogan": {
         "type": "string",
-        "selector": "p.freecompany__text__message"
+        "selector": "p.freecompany__text:first-of-type"
       },
       "tag": {
-        "selector": "p.freecompany__text__tag",
+        "selector": "p.freecompany__text > span.freecompany__text__tag",
         "regex": "«(\\S+)»",
         "type": "string"
       },
@@ -44,12 +44,12 @@
         "type": "object",
         "properties": {
           "members": {
-            "selector": "p.freecompany__text:nth-of-type(6)",
+            "selector": "p.freecompany__text:nth-child(15)",
             "regex": "(\\d+)",
             "type": "number"
           },
           "rank": {
-            "selector": "p.freecompany__text:nth-of-type(7)",
+            "selector": "p.freecompany__text:nth-child(17)",
             "regex": "(\\d+)",
             "type": "number"
           },
@@ -57,12 +57,12 @@
             "type": "object",
             "properties": {
               "weekly": {
-                "selector": "table.character__ranking__data tr:nth-of-type(1) th",
+                "selector": "table.character__ranking__data tr:nth-child(1) > td",
                 "regex": "(\\d+)",
                 "type": "number"
               },
               "monthly": {
-                "selector": "table.character__ranking__data tr:nth-of-type(2) th",
+                "selector": "table.character__ranking__data tr:nth-child(2) > td",
                 "regex": "(\\d+)",
                 "type": "number"
               }
@@ -85,7 +85,7 @@
         "type": "object",
         "properties": {
           "selected": {
-            "selector": "p.entry__freecompany__gc:first-of-type",
+            "selector": "p.entry__world:first-of-type",
             "regex": "^(\\D+) <\\D+>",
             "type": "string"
           },
@@ -133,11 +133,11 @@
             "properties": {
               "name": {
                 "type": "string",
-                "selector": "p.freecompany__estate__name"
+                "selector": "p.parts__text:nth-child(26)"
               },
               "address": {
                 "type": "string",
-                "selector": "p.freecompany__estate__text"
+                "selector": "p.parts__text:nth-child(28)"
               },
               "greeting": {
                 "type": "string",
@@ -161,11 +161,11 @@
         "properties": {
           "active": {
             "type": "string",
-            "selector": "div.ldst__window:last-of-type > p.freecompany__text:nth-of-type(1)"
+            "selector": "p.freecompany__text:nth-child(33)"
           },
           "recruitment": {
             "type": "string",
-            "selector": "div.ldst__window:last-of-type > p.freecompany__text:nth-of-type(2)"
+            "selector": "span.freecompany__recruitment"
           },
           "focus": {
             "type": "array",
@@ -189,7 +189,7 @@
               ],
               "additionalProperties": false
             },
-            "selector": "ul.freecompany__focus_icon:nth-of-type(1) > li:not([class*=\"off\"])"
+            "selector": "ul.freecompany__focus_icon > li:not([class*=\"off\"])"
           },
           "seeking": {
             "type": "array",
@@ -198,12 +198,13 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "selector": "p"
+                  "selector": "img",
+                  "attribute": "alt"
                 },
                 "icon": {
                   "type": "string",
                   "format": "uri",
-                  "selector": "div > img",
+                  "selector": "img",
                   "attribute": "src"
                 }
               },
@@ -213,7 +214,7 @@
               ],
               "additionalProperties": false
             },
-            "selector": "ul.freecompany__focus_icon:nth-of-type(2) > li:not([class*=\"off\"])"
+            "selector": "ul.freecompany__seeking_icon > li"
           }
         },
         "required": [

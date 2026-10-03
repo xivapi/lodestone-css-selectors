@@ -43,45 +43,46 @@
           "attribute": "src"
         },
         "grand_company": {
-          "type": "string",
-          "selector": "p.entry__world:first-of-type"
-        },
-        "details": {
+          "selector": "p.entry__world",
+          "regex": "(?<name>\\D+) <(?<rank>\\D+)>",
           "type": "object",
           "properties": {
-            "members": {
-              "type": "number",
-              "selector": "li.entry__freecompany__fc-member"
-            },
-            "estate": {
-              "type": "string",
-              "selector": "li.entry__freecompany__fc-housing"
-            },
-            "formed_at": {
-              "selector": "li.entry__freecompany__fc-day > script",
-              "regex": "ldst_strftime\\((\\d+)",
-              "type": "string",
-              "format": "date-time"
-            },
-            "active": {
-              "selector": "li.entry__freecompany__fc-active:nth-last-child(2)",
-              "regex": "^[^:]+:\\s*(.+)$",
+            "name": {
               "type": "string"
             },
-            "recruitment": {
-              "selector": "li.entry__freecompany__fc-active:last-of-type",
-              "regex": "^[^:]+:\\s*(.+)$",
+            "rank": {
               "type": "string"
             }
           },
           "required": [
-            "members",
-            "estate",
-            "formed_at",
-            "active",
-            "recruitment"
+            "name",
+            "rank"
           ],
           "additionalProperties": false
+        },
+        "active": {
+          "selector": "ul.entry__freecompany__fc-active li:first-of-type",
+          "regex": "^[^:]+:\\s*(.+)$",
+          "type": "string"
+        },
+        "recruitment": {
+          "selector": "ul.entry__freecompany__fc-active li:last-of-type",
+          "regex": "^[^:]+:\\s*(.+)$",
+          "type": "string"
+        },
+        "members": {
+          "type": "number",
+          "selector": "li.entry__freecompany__fc-member"
+        },
+        "estate": {
+          "type": "string",
+          "selector": "li.entry__freecompany__fc-housing"
+        },
+        "formed_at": {
+          "selector": "li.entry__freecompany__fc-day > script",
+          "regex": "ldst_strftime\\((\\d+)",
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
@@ -90,11 +91,15 @@
         "server",
         "crest",
         "grand_company",
-        "details"
+        "active",
+        "recruitment",
+        "members",
+        "estate",
+        "formed_at"
       ],
       "additionalProperties": false
     },
-    "selector": "div.ldst__window div.entry"
+    "selector": "div.freecompanies > div"
   },
   "query": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",

@@ -1,45 +1,32 @@
 {
-  "gearset": {
+  "equipment": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
     "properties": {
-      "db": {
-        "selector": "div.db-tooltip__bt_item_detail > a",
-        "attribute": "href",
-        "regex": "lodestone\\/playguide\\/db\\/(?<path>\\w+)\\/(?<id>\\S+)\\/",
-        "type": "object",
-        "properties": {
-          "path": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "path",
-          "id"
-        ],
-        "additionalProperties": false
-      },
       "name": {
         "type": "string",
-        "selector": "h2.db-tooltip__item__name"
+        "selector": "h1.db-view__header__detail__item-name"
+      },
+      "icon": {
+        "type": "string",
+        "format": "uri",
+        "selector": "img.db-view__header__item-image--icon",
+        "attribute": "src"
       },
       "category": {
         "type": "string",
-        "selector": "p.db-tooltip__item__category"
+        "selector": "h2.db-view__header__detail__category-name"
       },
       "ilvl": {
-        "selector": "div.db-tooltip__item__level",
+        "selector": "h3.db-view__item-level",
         "regex": "(?<level>\\d+)",
         "type": "number"
       },
-      "req": {
+      "equip": {
         "type": "object",
         "properties": {
           "class": {
-            "selector": "div.db-tooltip__item_equipment__class",
+            "selector": "div.db-view__item-equip-text p:nth-of-type(1)",
             "regex": "\\b[A-Z]{3} \\b",
             "type": "array",
             "items": {
@@ -47,7 +34,7 @@
             }
           },
           "level": {
-            "selector": "div.db-tooltip__item_equipment__level",
+            "selector": "div.db-view__item-equip-text p:nth-of-type(2)",
             "regex": "(\\d+)",
             "type": "number"
           }
@@ -61,35 +48,18 @@
       "attributes": {
         "type": "object",
         "properties": {
-          "spec": {
+          "main": {
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
                 "type": {
-                  "type": "string"
+                  "type": "string",
+                  "selector": "dt"
                 },
                 "value": {
-                  "type": "number"
-                }
-              },
-              "required": [
-                "type",
-                "value"
-              ],
-              "additionalProperties": false
-            }
-          },
-          "bonus": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string"
-                },
-                "value": {
-                  "type": "number"
+                  "type": "number",
+                  "selector": "dd"
                 }
               },
               "required": [
@@ -98,8 +68,29 @@
               ],
               "additionalProperties": false
             },
-            "selector": "ul.db-tooltip__basic_bonus > li",
-            "regex": "^(?<type>\\D+) (?<value>\\W\\d+)"
+            "selector": "div.db-view__item-info dl.db-view__item-info__list--main-status"
+          },
+          "bonus": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "selector": "span.name"
+                },
+                "value": {
+                  "type": "number",
+                  "selector": "span.value"
+                }
+              },
+              "required": [
+                "type",
+                "value"
+              ],
+              "additionalProperties": false
+            },
+            "selector": "div.db-view__item-info ul.db-view__item-info__list--bonuses > li"
           },
           "effect": {
             "type": "array",
@@ -124,10 +115,19 @@
           }
         },
         "required": [
-          "spec",
+          "main",
           "bonus"
         ],
         "additionalProperties": false
+      },
+      "materia": {
+        "selector": "div.db-view__item-info ul.character-item__materia-list > li",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        }
       },
       "flags": {
         "type": "object",
@@ -136,7 +136,7 @@
             "type": "object",
             "properties": {
               "req": {
-                "selector": "ul.db-tooltip__item_repair > li:nth-of-type(3) > span:last-child",
+                "selector": "div.db-view__item-info__table--craft_repair tr:nth-of-type(3) > td",
                 "regex": "(?<class>\\D+) \\D+ (?<level>\\d+)",
                 "type": "object",
                 "properties": {
@@ -155,7 +155,7 @@
               },
               "material": {
                 "type": "string",
-                "selector": "ul.db-tooltip__item_repair > li:nth-of-type(4) > span:last-child"
+                "selector": "div.db-view__item-info__table--craft_repair tr:nth-of-type(4) > td"
               }
             },
             "required": [
@@ -165,22 +165,22 @@
             "additionalProperties": false
           },
           "extractable": {
-            "selector": "ul.db-tooltip__item-info__list > li:nth-of-type(1) > span",
+            "selector": "ul.db-view__item-info__craft_repair > li:nth-of-type(1) > span",
             "regex": "\\b(?:yes|ja|oui|はい)\\b|○",
             "type": "boolean"
           },
           "projectable": {
-            "selector": "ul.db-tooltip__item-info__list > li:nth-of-type(2) > span",
+            "selector": "ul.db-view__item-info__craft_repair > li:nth-of-type(2) > span",
             "regex": "\\b(?:yes|ja|oui|はい)\\b|○",
             "type": "boolean"
           },
           "desynthesizable": {
-            "selector": "ul.db-tooltip__item-info__list > li:nth-of-type(3) > span",
+            "selector": "ul.db-view__item-info__craft_repair > li:nth-of-type(3) > span",
             "regex": "\\b(?:yes|ja|oui|はい)\\b|○",
             "type": "boolean"
           },
           "dyeable": {
-            "selector": "ul.db-tooltip__item-info__list > li:nth-of-type(4) > span",
+            "selector": "ul.db-view__item-info__craft_repair > li:nth-of-type(4) > span",
             "regex": "\\b(?:yes|ja|oui|はい)\\b|○",
             "type": "boolean"
           }
@@ -196,11 +196,11 @@
       }
     },
     "required": [
-      "db",
       "name",
+      "icon",
       "category",
       "ilvl",
-      "req",
+      "equip",
       "attributes",
       "flags"
     ],
