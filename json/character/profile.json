@@ -65,12 +65,12 @@
       },
       "bio": {
         "default": "-",
-        "selector": "div.character__selfintroduction",
+        "selector": "div.character__character_profile",
         "type": "string"
       },
-      "lore": {
-        "selector": "div.character-block:first-of-type p.character-block__name",
-        "regex": "^(?<race>Hyur|Elezen|Lalafell|Miqo'te|Roegadyn|Au Ra|Hrothgar|Viera)<br>(?<clan>Midlander|Highlander|Wildwood|Duskwight|Plainsfolk|Dunesfolk|Seeker of the Sun|Keeper of the Moon|Sea Wolf|Hellsguard|Raen|Xaela|Helions|The Lost|Rava|Veena) / (?<gender>\\W)",
+      "identity": {
+        "selector": "div.character-block:nth-child(2) p.character-block__profile",
+        "regex": "^(?<race>Hyur|Elezen|Lalafell|Miqo'te|Roegadyn|Au Ra|Hrothgar|Viera)(?<clan>Midlander|Highlander|Wildwood|Duskwight|Plainsfolk|Dunesfolk|Seeker of the Sun|Keeper of the Moon|Sea Wolf|Hellsguard|Raen|Xaela|Helions|The Lost|Rava|Veena) / (?<gender>\\W)",
         "type": "object",
         "properties": {
           "race": {
@@ -80,7 +80,11 @@
             "type": "string"
           },
           "gender": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "Male",
+              "Female"
+            ]
           }
         },
         "required": [
@@ -96,107 +100,131 @@
       },
       "guardian": {
         "type": "string",
-        "selector": "div.character-block:nth-child(2) p.character-block__name"
+        "selector": "p.character-block__profile:nth-of-type(4)"
       },
       "citystate": {
         "type": "string",
-        "selector": "div.character-block:nth-child(3) p.character-block__name"
+        "selector": "div.character-block:nth-child(4) p.character-block__profile"
       },
       "grand_company": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "selector": "div.character__profile__data__detail > div:nth-of-type(4) p.character-block__name",
-            "regex": "(\\w+) \\/ \\w+",
-            "type": "string"
-          },
-          "rank": {
+        "default": null,
+        "anyOf": [
+          {
             "type": "object",
             "properties": {
               "name": {
-                "selector": "div.character__profile__data__detail > div:nth-of-type(4) p.character-block__name",
-                "regex": "\\w+ \\/ (\\w+)",
+                "selector": "div.character-block:nth-of-type(4) p.character-block__profile",
+                "regex": "(\\D+) \\/ \\D+",
                 "type": "string"
               },
-              "icon": {
-                "type": "string",
-                "format": "uri",
-                "selector": "div.character__profile__data__detail > div:nth-of-type(4) > img",
-                "attribute": "src"
+              "rank": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "selector": "div.character-block:nth-of-type(4) p.character-block__profile",
+                    "regex": "\\D+ \\/ (\\D+)",
+                    "type": "string"
+                  },
+                  "icon": {
+                    "type": "string",
+                    "format": "uri",
+                    "selector": "div.character-block:nth-of-type(4) > img",
+                    "attribute": "src"
+                  }
+                },
+                "required": [
+                  "name",
+                  "icon"
+                ],
+                "additionalProperties": false
               }
             },
             "required": [
               "name",
-              "icon"
+              "rank"
             ],
             "additionalProperties": false
+          },
+          {
+            "type": "null"
           }
-        },
-        "required": [
-          "name",
-          "rank"
-        ],
-        "additionalProperties": false
+        ]
       },
       "free_company": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "selector": "div.character__freecompany__name a",
-            "attribute": "href",
-            "regex": "lodestone\\/freecompany\\/(\\S+)\\/",
-            "type": "string"
-          },
-          "name": {
-            "type": "string",
-            "selector": "div.character__freecompany__name a"
-          },
-          "crest": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "uri"
+        "default": null,
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "selector": "a.entry__freecompany[href*=\"/freecompany/\"]",
+                "attribute": "href",
+                "regex": "lodestone\\/freecompany\\/(\\S+)\\/",
+                "type": "string"
+              },
+              "name": {
+                "type": "string",
+                "selector": "a.entry__freecompany[href*=\"/freecompany/\"] div.character__freecompany__name > h4"
+              },
+              "crest": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "selector": "a.entry__freecompany[href*=\"/freecompany/\"] div.character__freecompany__crest__image > img",
+                "attribute": "src"
+              }
             },
-            "selector": "div.character__freecompany__crest__image > img",
-            "attribute": "src"
+            "required": [
+              "id",
+              "name",
+              "crest"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "null"
           }
-        },
-        "required": [
-          "id",
-          "name",
-          "crest"
-        ],
-        "additionalProperties": false
+        ]
       },
       "pvp_team": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "selector": "div.character__pvpteam__name a",
-            "attribute": "href",
-            "regex": "lodestone\\/pvpteam\\/(\\S+)\\/",
-            "type": "string"
-          },
-          "name": {
-            "type": "string",
-            "selector": "div.character__pvpteam__name a"
-          },
-          "crest": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "uri"
+        "default": null,
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "selector": "a.entry__freecompany[href*=\"/pvpteam/\"]",
+                "attribute": "href",
+                "regex": "lodestone\\/pvpteam\\/(\\S+)\\/",
+                "type": "string"
+              },
+              "name": {
+                "type": "string",
+                "selector": "a.entry__freecompany[href*=\"/pvpteam/\"] div.character__freecompany__name > h4"
+              },
+              "crest": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "selector": "a.entry__freecompany[href*=\"/pvpteam/\"] div.character__freecompany__crest__image > img",
+                "attribute": "src"
+              }
             },
-            "selector": "div.character__pvpteam__crest img",
-            "attribute": "src"
+            "required": [
+              "id",
+              "name",
+              "crest"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "null"
           }
-        },
-        "required": [
-          "id",
-          "name",
-          "crest"
-        ],
-        "additionalProperties": false
+        ]
       }
     },
     "required": [
@@ -205,10 +233,13 @@
       "server",
       "title",
       "bio",
-      "lore",
+      "identity",
       "nameday",
       "guardian",
-      "citystate"
+      "citystate",
+      "grand_company",
+      "free_company",
+      "pvp_team"
     ],
     "additionalProperties": false
   },
@@ -219,10 +250,12 @@
       "type": "object",
       "properties": {
         "type": {
-          "type": "string"
+          "type": "string",
+          "selector": "p.character__param__text"
         },
         "value": {
-          "type": "number"
+          "type": "number",
+          "selector": "span"
         }
       },
       "required": [
@@ -231,7 +264,6 @@
       ],
       "additionalProperties": false
     },
-    "selector": "div.character__param > ul div",
-    "regex": "([A-Z]{2})(\\d+)"
+    "selector": "ul.character__param div"
   }
 }

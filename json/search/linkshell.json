@@ -6,17 +6,17 @@
       "type": "object",
       "properties": {
         "id": {
-          "selector": "a.entry__link--line",
+          "selector": "a",
           "attribute": "href",
           "regex": "lodestone\\/linkshell\\/(\\d+)\\/",
           "type": "string"
         },
         "name": {
           "type": "string",
-          "selector": "p.entry__name"
+          "selector": "h4"
         },
         "server": {
-          "selector": "p.entry__world",
+          "selector": "li.btn__icon__inner--left",
           "regex": "^(?<world>.+?)\\s*\\[(?<dc>.*?)\\]$",
           "type": "object",
           "properties": {
@@ -35,7 +35,7 @@
         },
         "members": {
           "type": "number",
-          "selector": "div.entry__linkshell__member span"
+          "selector": "li.btn__icon__inner--right > span"
         }
       },
       "required": [
@@ -46,7 +46,7 @@
       ],
       "additionalProperties": false
     },
-    "selector": "div.ldst__window div.entry"
+    "selector": "div.linkshells > div"
   },
   "query": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",

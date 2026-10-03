@@ -6,7 +6,7 @@
       "type": "object",
       "properties": {
         "id": {
-          "selector": "a.entry__bg",
+          "selector": "a.cf-member-list",
           "attribute": "href",
           "regex": "(\\d+)",
           "type": "string"
@@ -46,100 +46,18 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "selector": "div.entry__chara_info__linkshell > span"
+                  "selector": "li.entry__chara_info__linkshell > span"
                 },
                 "icon": {
                   "type": "string",
                   "format": "uri",
-                  "selector": "div.entry__chara_info__linkshell > img",
+                  "selector": "li.entry__chara_info__linkshell > img",
                   "attribute": "src"
                 }
               },
               "required": [
                 "name",
                 "icon"
-              ],
-              "additionalProperties": false
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "grand_company": {
-          "default": null,
-          "anyOf": [
-            {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "selector": "li.js__tooltip",
-                  "attribute": "data-tooltip",
-                  "type": "string"
-                },
-                "rank": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "selector": "li.js__tooltip",
-                      "attribute": "data-tooltip",
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string",
-                      "format": "uri",
-                      "selector": "li.js__tooltip > img",
-                      "attribute": "src"
-                    }
-                  },
-                  "required": [
-                    "name",
-                    "icon"
-                  ],
-                  "additionalProperties": false
-                }
-              },
-              "required": [
-                "name",
-                "rank"
-              ],
-              "additionalProperties": false
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "free_company": {
-          "default": null,
-          "anyOf": [
-            {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "selector": "a.entry__freecompany__link",
-                  "attribute": "href",
-                  "regex": "(\\d+)",
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string",
-                  "selector": "a.entry__freecompany__link > span"
-                },
-                "crest": {
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "format": "uri"
-                  },
-                  "selector": "a.entry__freecompany__link img",
-                  "attribute": "src"
-                }
-              },
-              "required": [
-                "id",
-                "name",
-                "crest"
               ],
               "additionalProperties": false
             },
@@ -154,29 +72,26 @@
         "name",
         "avatar",
         "server",
-        "rank",
-        "grand_company",
-        "free_company"
+        "rank"
       ],
       "additionalProperties": false
     },
-    "selector": "div.ls__member > div.entry"
+    "selector": "div.linkshell_characters div.entry__bg"
   },
   "profile": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
     "properties": {
       "name": {
-        "selector": "h3.heading__linkshell__name",
-        "regex": "(\\D+)\\s+",
-        "type": "string"
+        "type": "string",
+        "selector": "p.frame__cwls__name"
       },
       "server": {
         "type": "object",
         "properties": {
           "dc": {
             "type": "string",
-            "selector": "span.heading__cwls__dcname"
+            "selector": "span.frame__cwls__world"
           }
         },
         "required": [
@@ -185,7 +100,7 @@
         "additionalProperties": false
       },
       "formed_at": {
-        "selector": "span.heading__cwls__formed > script",
+        "selector": "span.frame__cwls__formed > script",
         "regex": "ldst_strftime\\((\\d+)",
         "type": "string",
         "format": "date-time"

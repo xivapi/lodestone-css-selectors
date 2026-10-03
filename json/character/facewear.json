@@ -1,0 +1,33 @@
+{
+  "facewear": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "selector": "span[id]",
+          "attribute": "id"
+        },
+        "name": {
+          "type": "string",
+          "selector": "span.faceaccessory__name"
+        },
+        "icon": {
+          "type": "string",
+          "format": "uri",
+          "selector": "img",
+          "attribute": "src"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "icon"
+      ],
+      "additionalProperties": false
+    },
+    "selector": "div.character__faceaccessory > ul.faceaccessory__list > li"
+  }
+}

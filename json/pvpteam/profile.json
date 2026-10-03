@@ -46,12 +46,12 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "selector": "ul.entry__freecompany__info:not(:has(li:first-of-type > i.list__ic__class)) > li:first-of-type > span"
+                  "selector": "ul.entry__pvpteam__member__info > li:not(:has(i.list__ic__class)):first-of-type > span"
                 },
                 "icon": {
                   "type": "string",
                   "format": "uri",
-                  "selector": "ul.entry__freecompany__info:not(:has(li:first-of-type > i.list__ic__class)) > li:first-of-type > img",
+                  "selector": "ul.entry__pvpteam__member__info > li:not(:has(i.list__ic__class)):first-of-type > img",
                   "attribute": "src"
                 }
               },
@@ -66,53 +66,9 @@
             }
           ]
         },
-        "grand_company": {
-          "default": null,
-          "anyOf": [
-            {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "selector": "li.js__tooltip",
-                  "attribute": "data-tooltip",
-                  "type": "string"
-                },
-                "rank": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "selector": "li.js__tooltip",
-                      "attribute": "data-tooltip",
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string",
-                      "format": "uri",
-                      "selector": "li.js__tooltip > img",
-                      "attribute": "src"
-                    }
-                  },
-                  "required": [
-                    "name",
-                    "icon"
-                  ],
-                  "additionalProperties": false
-                }
-              },
-              "required": [
-                "name",
-                "rank"
-              ],
-              "additionalProperties": false
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
         "matches": {
           "default": 0,
-          "selector": "ul.entry__freecompany__info > li:last-of-type > span",
+          "selector": "ul.entry__pvpteam__member__info > li:not(:has(i.list__ic__class)):last-of-type > span",
           "type": "number"
         }
       },
@@ -122,7 +78,6 @@
         "avatar",
         "server",
         "rank",
-        "grand_company",
         "matches"
       ],
       "additionalProperties": false
@@ -160,7 +115,7 @@
         "attribute": "src"
       },
       "formed_at": {
-        "selector": "span.entry__pvpteam__data--formed > script",
+        "selector": "p.entry__pvpteam__data--formed > script",
         "regex": "ldst_strftime\\((\\d+)",
         "type": "string",
         "format": "date-time"

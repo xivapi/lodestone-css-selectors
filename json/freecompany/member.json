@@ -43,54 +43,18 @@
           "properties": {
             "name": {
               "type": "string",
-              "selector": "ul.entry__freecompany__info > li:first-of-type > span"
+              "selector": "ul.entry__chara_info > li:first-of-type > span"
             },
             "icon": {
               "type": "string",
               "format": "uri",
-              "selector": "ul.entry__freecompany__info > li:first-of-type > img",
+              "selector": "ul.entry__chara_info > li:first-of-type > img",
               "attribute": "src"
             }
           },
           "required": [
             "name",
             "icon"
-          ],
-          "additionalProperties": false
-        },
-        "grand_company": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "selector": "li.js__tooltip",
-              "attribute": "data-tooltip",
-              "type": "string"
-            },
-            "rank": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "selector": "li.js__tooltip",
-                  "attribute": "data-tooltip",
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string",
-                  "format": "uri",
-                  "selector": "li.js__tooltip > img",
-                  "attribute": "src"
-                }
-              },
-              "required": [
-                "name",
-                "icon"
-              ],
-              "additionalProperties": false
-            }
-          },
-          "required": [
-            "name",
-            "rank"
           ],
           "additionalProperties": false
         }
@@ -104,6 +68,6 @@
       ],
       "additionalProperties": false
     },
-    "selector": "div.ldst__window li.entry"
+    "selector": "div.freecompany_characters li.entry"
   }
 }

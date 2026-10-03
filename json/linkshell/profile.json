@@ -46,100 +46,18 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "selector": "div.entry__chara_info__linkshell > span"
+                  "selector": "li.entry__chara_info__linkshell > span"
                 },
                 "icon": {
                   "type": "string",
                   "format": "uri",
-                  "selector": "div.entry__chara_info__linkshell > img",
+                  "selector": "li.entry__chara_info__linkshell > img",
                   "attribute": "src"
                 }
               },
               "required": [
                 "name",
                 "icon"
-              ],
-              "additionalProperties": false
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "grand_company": {
-          "default": null,
-          "anyOf": [
-            {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "selector": "li.js__tooltip",
-                  "attribute": "data-tooltip",
-                  "type": "string"
-                },
-                "rank": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "selector": "li.js__tooltip",
-                      "attribute": "data-tooltip",
-                      "type": "string"
-                    },
-                    "icon": {
-                      "type": "string",
-                      "format": "uri",
-                      "selector": "li.js__tooltip > img",
-                      "attribute": "src"
-                    }
-                  },
-                  "required": [
-                    "name",
-                    "icon"
-                  ],
-                  "additionalProperties": false
-                }
-              },
-              "required": [
-                "name",
-                "rank"
-              ],
-              "additionalProperties": false
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "free_company": {
-          "default": null,
-          "anyOf": [
-            {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "selector": "a.entry__freecompany__link",
-                  "attribute": "href",
-                  "regex": "(\\d+)",
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string",
-                  "selector": "a.entry__freecompany__link > span"
-                },
-                "crest": {
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "format": "uri"
-                  },
-                  "selector": "a.entry__freecompany__link img",
-                  "attribute": "src"
-                }
-              },
-              "required": [
-                "id",
-                "name",
-                "crest"
               ],
               "additionalProperties": false
             },
@@ -154,13 +72,11 @@
         "name",
         "avatar",
         "server",
-        "rank",
-        "grand_company",
-        "free_company"
+        "rank"
       ],
       "additionalProperties": false
     },
-    "selector": "div.ls__member > div.entry"
+    "selector": "div.linkshell_characters > div.entry"
   },
   "profile": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -168,10 +84,10 @@
     "properties": {
       "name": {
         "type": "string",
-        "selector": "h3.heading__linkshell__name"
+        "selector": "p.frame__chara__name"
       },
       "server": {
-        "selector": "div.ls__member > div.entry:first-of-type p.entry__world",
+        "selector": "div.linkshell_characters > div.entry:first-of-type p.entry__world",
         "type": "object",
         "properties": {
           "world": {

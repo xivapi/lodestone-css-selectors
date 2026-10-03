@@ -34,7 +34,7 @@
             "type": "string",
             "format": "uri"
           },
-          "selector": "div.entry__pvpteam__search__crest__image > img",
+          "selector": "div.entry__freecompany__crest__image > img",
           "attribute": "src"
         }
       },
@@ -46,7 +46,7 @@
       ],
       "additionalProperties": false
     },
-    "selector": "div.ldst__window div.entry"
+    "selector": "div.pvpteams > div"
   },
   "query": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",

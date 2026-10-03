@@ -3,40 +3,21 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
     "properties": {
-      "start": {
-        "type": "string",
-        "selector": "a.btn__pager__prev--all"
-      },
-      "previous": {
-        "type": "string",
-        "selector": "a.btn__pager__prev"
-      },
-      "current": {
-        "selector": "a.btn__pager__current",
-        "type": "number"
-      },
-      "pages": {
-        "selector": "a.btn__pager__current",
+      "total": {
+        "selector": "div.parts__fraction",
+        "regex": "(\\d+)",
         "type": "number"
       },
       "next": {
-        "type": "string",
-        "selector": "a.btn__pager__next"
-      },
-      "end": {
-        "type": "string",
-        "selector": "a.btn__pager__next--all"
+        "selector": "div.btn__next > a",
+        "regex": "(\\d+)",
+        "type": "number"
       }
     },
     "required": [
-      "start",
-      "previous",
-      "current",
-      "pages",
-      "next",
-      "end"
+      "total",
+      "next"
     ],
-    "additionalProperties": false,
-    "selector": "ul.btn__pager"
+    "additionalProperties": false
   }
 }
