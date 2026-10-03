@@ -13,7 +13,6 @@
   "exports": {
     "./*": "./src/schemas/*",
     "./metadata": "./src/metadata.ts",
-    "./zod": "./src/zod.d.ts",
     "./json/*": "./json/*"
   },
   "scripts": {
