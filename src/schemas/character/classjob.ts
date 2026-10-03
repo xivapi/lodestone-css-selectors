@@ -15,90 +15,66 @@ export const classjob = z
       exp: z
         .string()
         .transform((val) => {
-          const parts = val
-            .split("/")
-            .map((str) => Number(str?.replace(/\D/g, "")));
-          return parts.some((val) => val === 0) ? null : parts;
+          const groups = val.match(
+            /^(?<current>[\d,. ]+) \/ (?<max>[\d,. ]+)/,
+          )?.groups;
+          return Object.fromEntries(
+            Object.entries(groups ?? {}).map(([key, str]) => {
+              const digits = str.replace(/\D/g, "");
+              return [key, digits ? parseInt(digits, 10) : 0];
+            }),
+          );
         })
-        .pipe(z.tuple([z.number(), z.number()]).nullable())
-        .meta({ selector: "div.character__job__exp" }),
-    })
+        .pipe(
+          z.object({
+            current: z.number().default(0),
+            max: z.number().default(0),
+          }),
+        )
+        .meta({
+          selector: "div.character__job__exp",
+          regex: /^(?<current>[\d,. ]+) \/ (?<max>[\d,. ]+)/.source,
+        }),
+    }),
   )
   .meta({
     selector: "div.ldst__bg > div.character__job__role:nth-of-type(-n + 6) li",
   });
 
-export const zones = z.object({
-  eureka: z.object({
-    label: z.string().meta({
-      selector:
-        "div.ldst__bg > div.character__job__role:nth-of-type(7) div.character__job__name-sp",
+export const field_operations = z
+  .array(
+    z.object({
+      name: z.string().meta({ selector: "div.character__job__name-sp" }),
+      level: z.coerce.number().meta({ selector: "div.character__job__level" }),
+      exp: z
+        .string()
+        .transform((val) => {
+          const groups = val.match(
+            /^(?<current>[\d,. ]+) \/ (?<max>[\d,. ]+)/,
+          )?.groups;
+          return Object.fromEntries(
+            Object.entries(groups ?? {}).map(([key, str]) => {
+              const digits = str.replace(/\D/g, "");
+              return [key, digits ? parseInt(digits, 10) : 0];
+            }),
+          );
+        })
+        .pipe(
+          z.object({
+            current: z.number().default(0),
+            max: z.number().default(0),
+          }),
+        )
+        .meta({
+          selector: "div.character__job__exp",
+          regex: /^(?<current>[\d,. ]+) \/ (?<max>[\d,. ]+)/.source,
+        }),
     }),
-    level: z.coerce.number().meta({
-      selector:
-        "div.ldst__bg > div.character__job__role:nth-of-type(7) div.character__job__level",
-    }),
-    exp: z
-      .string()
-      .transform((val) => {
-        const parts = val
-          .split("/")
-          .map((str) => Number(str?.replace(/\D/g, "")));
-        return parts.some((val) => val === 0) ? null : parts;
-      })
-      .pipe(z.tuple([z.number(), z.number()]).nullable())
-      .meta({
-        selector:
-          "div.ldst__bg > div.character__job__role:nth-of-type(7) div.character__job__exp",
-      }),
-  }),
-  bozja: z.object({
-    label: z.string().meta({
-      selector:
-        "div.ldst__bg > div.character__job__role:nth-of-type(8) div.character__job__name-sp",
-    }),
-    level: z.coerce.number().meta({
-      selector:
-        "div.ldst__bg > div.character__job__role:nth-of-type(8) div.character__job__level",
-    }),
-    exp: z
-      .string()
-      .transform((val) => {
-        const parts = val
-          .split("/")
-          .map((str) => Number(str?.replace(/\D/g, "")));
-        return parts.some((val) => val === 0) ? null : parts;
-      })
-      .pipe(z.tuple([z.number(), z.number()]).nullable())
-      .meta({
-        selector:
-          "div.ldst__bg > div.character__job__role:nth-of-type(8) div.character__job__exp",
-      }),
-  }),
-  occult_cresent: z.object({
-    label: z.string().meta({
-      selector:
-        "div.ldst__bg > div.character__job__role:nth-of-type(9) div.character__job__name-sp",
-    }),
-    level: z.coerce.number().meta({
-      selector:
-        "div.ldst__bg > div.character__job__role:nth-of-type(8) div.character__job__level",
-    }),
-    exp: z
-      .string()
-      .transform((val) => {
-        const parts = val
-          .split("/")
-          .map((str) => Number(str?.replace(/\D/g, "")));
-        return parts.some((val) => val === 0) ? null : parts;
-      })
-      .pipe(z.tuple([z.number(), z.number()]).nullable())
-      .meta({
-        selector:
-          "div.ldst__bg > div.character__job__role:nth-of-type(8) div.character__job__exp",
-      }),
-  }),
-});
+  )
+  .meta({
+    selector:
+      "div.ldst__bg > div.character__job__role:has(div.character__job__name-sp)",
+  });
 
 export const phantom_jobs = z
   .array(
@@ -112,19 +88,30 @@ export const phantom_jobs = z
           selector: "p.character__support_job__level",
           regex: /(\d+)/.source,
         }),
+      mastered: z
+        .string()
+        .pipe(z.coerce.boolean())
+        .optional()
+        .meta({ selector: "p.character__support_job__master" }),
       exp: z
         .string()
         .transform((val) => {
-          const parts = val
-            .split("/")
-            .map((str) => Number(str?.replace(/\D/g, "")));
-          return parts.every((val) => val === 0) ? null : parts;
+          const groups = val.match(
+            /^(?<current>[\d,. ]+) \/ (?<max>[\d,. ]+)/,
+          )?.groups;
+          return Object.fromEntries(
+            Object.entries(groups ?? {}).map(([key, str]) => {
+              const digits = str.replace(/\D/g, "");
+              return [key, digits ? parseInt(digits, 10) : 0];
+            }),
+          );
         })
-        .pipe(z.tuple([z.number(), z.number()]).nullable())
+        .pipe(z.object({ current: z.number(), max: z.number() }))
+        .optional()
         .meta({
-          selector:
-            "p.character__support_job__exp,p.character__support_job__master",
+          selector: "p.character__support_job__exp",
+          regex: /^(?<current>[\d,. ]+) \/ (?<max>[\d,. ]+)/.source,
         }),
-    })
+    }),
   )
   .meta({ selector: "div.character__support_job li" });
