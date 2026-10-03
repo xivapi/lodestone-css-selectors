@@ -16,25 +16,23 @@
         },
         "exp": {
           "selector": "div.character__job__exp",
-          "anyOf": [
-            {
-              "type": "array",
-              "prefixItems": [
-                {
-                  "type": "number"
-                },
-                {
-                  "type": "number"
-                }
-              ],
-              "items": false,
-              "minItems": 2,
-              "maxItems": 2
+          "regex": "^(?<current>[\\d,. ]+) \\/ (?<max>[\\d,. ]+)",
+          "type": "object",
+          "properties": {
+            "current": {
+              "default": 0,
+              "type": "number"
             },
-            {
-              "type": "null"
+            "max": {
+              "default": 0,
+              "type": "number"
             }
-          ]
+          },
+          "required": [
+            "current",
+            "max"
+          ],
+          "additionalProperties": false
         }
       },
       "required": [
@@ -45,6 +43,50 @@
       "additionalProperties": false
     },
     "selector": "div.ldst__bg > div.character__job__role:nth-of-type(-n + 6) li"
+  },
+  "field_operations": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "selector": "div.character__job__name-sp"
+        },
+        "level": {
+          "type": "number",
+          "selector": "div.character__job__level"
+        },
+        "exp": {
+          "selector": "div.character__job__exp",
+          "regex": "^(?<current>[\\d,. ]+) \\/ (?<max>[\\d,. ]+)",
+          "type": "object",
+          "properties": {
+            "current": {
+              "default": 0,
+              "type": "number"
+            },
+            "max": {
+              "default": 0,
+              "type": "number"
+            }
+          },
+          "required": [
+            "current",
+            "max"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "level",
+        "exp"
+      ],
+      "additionalProperties": false
+    },
+    "selector": "div.ldst__bg > div.character__job__role:has(div.character__job__name-sp)"
   },
   "phantom_jobs": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -61,171 +103,35 @@
           "regex": "(\\d+)",
           "type": "number"
         },
+        "mastered": {
+          "selector": "p.character__support_job__master",
+          "type": "boolean"
+        },
         "exp": {
-          "selector": "p.character__support_job__exp,p.character__support_job__master",
-          "anyOf": [
-            {
-              "type": "array",
-              "prefixItems": [
-                {
-                  "type": "number"
-                },
-                {
-                  "type": "number"
-                }
-              ],
-              "items": false,
-              "minItems": 2,
-              "maxItems": 2
+          "selector": "p.character__support_job__exp",
+          "regex": "^(?<current>[\\d,. ]+) \\/ (?<max>[\\d,. ]+)",
+          "type": "object",
+          "properties": {
+            "current": {
+              "type": "number"
             },
-            {
-              "type": "null"
+            "max": {
+              "type": "number"
             }
-          ]
+          },
+          "required": [
+            "current",
+            "max"
+          ],
+          "additionalProperties": false
         }
       },
       "required": [
         "name",
-        "level",
-        "exp"
+        "level"
       ],
       "additionalProperties": false
     },
     "selector": "div.character__support_job li"
-  },
-  "zones": {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-      "eureka": {
-        "type": "object",
-        "properties": {
-          "label": {
-            "type": "string",
-            "selector": "div.ldst__bg > div.character__job__role:nth-of-type(7) div.character__job__name-sp"
-          },
-          "level": {
-            "type": "number",
-            "selector": "div.ldst__bg > div.character__job__role:nth-of-type(7) div.character__job__level"
-          },
-          "exp": {
-            "selector": "div.ldst__bg > div.character__job__role:nth-of-type(7) div.character__job__exp",
-            "anyOf": [
-              {
-                "type": "array",
-                "prefixItems": [
-                  {
-                    "type": "number"
-                  },
-                  {
-                    "type": "number"
-                  }
-                ],
-                "items": false,
-                "minItems": 2,
-                "maxItems": 2
-              },
-              {
-                "type": "null"
-              }
-            ]
-          }
-        },
-        "required": [
-          "label",
-          "level",
-          "exp"
-        ],
-        "additionalProperties": false
-      },
-      "bozja": {
-        "type": "object",
-        "properties": {
-          "label": {
-            "type": "string",
-            "selector": "div.ldst__bg > div.character__job__role:nth-of-type(8) div.character__job__name-sp"
-          },
-          "level": {
-            "type": "number",
-            "selector": "div.ldst__bg > div.character__job__role:nth-of-type(8) div.character__job__level"
-          },
-          "exp": {
-            "selector": "div.ldst__bg > div.character__job__role:nth-of-type(8) div.character__job__exp",
-            "anyOf": [
-              {
-                "type": "array",
-                "prefixItems": [
-                  {
-                    "type": "number"
-                  },
-                  {
-                    "type": "number"
-                  }
-                ],
-                "items": false,
-                "minItems": 2,
-                "maxItems": 2
-              },
-              {
-                "type": "null"
-              }
-            ]
-          }
-        },
-        "required": [
-          "label",
-          "level",
-          "exp"
-        ],
-        "additionalProperties": false
-      },
-      "occult_cresent": {
-        "type": "object",
-        "properties": {
-          "label": {
-            "type": "string",
-            "selector": "div.ldst__bg > div.character__job__role:nth-of-type(9) div.character__job__name-sp"
-          },
-          "level": {
-            "type": "number",
-            "selector": "div.ldst__bg > div.character__job__role:nth-of-type(8) div.character__job__level"
-          },
-          "exp": {
-            "selector": "div.ldst__bg > div.character__job__role:nth-of-type(8) div.character__job__exp",
-            "anyOf": [
-              {
-                "type": "array",
-                "prefixItems": [
-                  {
-                    "type": "number"
-                  },
-                  {
-                    "type": "number"
-                  }
-                ],
-                "items": false,
-                "minItems": 2,
-                "maxItems": 2
-              },
-              {
-                "type": "null"
-              }
-            ]
-          }
-        },
-        "required": [
-          "label",
-          "level",
-          "exp"
-        ],
-        "additionalProperties": false
-      }
-    },
-    "required": [
-      "eureka",
-      "bozja",
-      "occult_cresent"
-    ],
-    "additionalProperties": false
   }
 }
