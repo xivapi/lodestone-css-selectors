@@ -1,4 +1,4 @@
-// This was made for test suites however it got messy in testing.
+// This was made for test suites (decided against), instead of being deleted it is kept here.
 // You can use this file for testing the schemas, please see below for a basic example:
 
 /* async () => {
