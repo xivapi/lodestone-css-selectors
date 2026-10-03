@@ -26,47 +26,36 @@ export const profile = z.object({
   bio: z
     .string()
     .default("-")
-    .meta({ selector: "div.character__selfintroduction" }),
-  details: z
-    .object({
-      rcg: z.string().meta({
-        selector: "div.character-block:nth-child(2) p.character-block__profile",
-        regex: `^(?<race>${Object.keys(Race).join("|")})(?<clan>${Object.keys(Tribe).join("|")}) / (?<gender>\\W)`,
-      }),
-      nameday: z.string().meta({ selector: "p.character-block__birth" }),
-      guardian: z
-        .string()
-        .meta({ selector: "p.character-block__profile:nth-of-type(4)" }),
-      citystate: z.string().meta({
-        selector: "div.character-block:nth-child(4) p.character-block__profile",
-      }),
-    })
-    .transform(({ rcg, nameday, guardian, citystate }) => {
-      const groups = rcg.match(
+    .meta({ selector: "div.character__character_profile" }),
+  identity: z
+    .string()
+    .transform((val) => {
+      const groups = val.match(
         new RegExp(
           `^(?<race>${Object.keys(Race).join("|")})(?<clan>${Object.keys(Tribe).join("|")}) / (?<gender>\\W)`
         )
       )?.groups;
 
-      return {
-        race: groups?.race.trim() as string,
-        clan: groups?.clan.trim() as string,
-        gender: groups?.gender === "♀" ? "Female" : "Male",
-        nameday,
-        guardian,
-        citystate,
-      };
+      return { ...groups, gender: groups?.gender === "♀" ? "Female" : "Male" };
     })
     .pipe(
       z.object({
         race: z.string(),
         clan: z.string(),
         gender: z.literal(["Male", "Female"]),
-        nameday: z.string(),
-        guardian: z.string(),
-        citystate: z.string(),
       })
-    ),
+    )
+    .meta({
+      selector: "div.character-block:nth-child(2) p.character-block__profile",
+      regex: `^(?<race>${Object.keys(Race).join("|")})(?<clan>${Object.keys(Tribe).join("|")}) / (?<gender>\\W)`,
+    }),
+  nameday: z.string().meta({ selector: "p.character-block__birth" }),
+  guardian: z
+    .string()
+    .meta({ selector: "p.character-block__profile:nth-of-type(4)" }),
+  citystate: z.string().meta({
+    selector: "div.character-block:nth-child(4) p.character-block__profile",
+  }),
   grand_company: z
     .object({
       name: z
