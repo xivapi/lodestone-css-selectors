@@ -38,7 +38,7 @@ const metadata = <T>(schema: z.core.ZodStandardJSONSchemaPayload<T>) => {
 // We only care about the raw values to test if the selectors work!
 export function parse<T = unknown>(
   dom: Document | Element,
-  schema: z.core.ZodStandardJSONSchemaPayload<T>,
+  schema: z.core.ZodStandardJSONSchemaPayload<T>
 ): z.output<T> | null | undefined {
   if (schema.type === "null") return null;
 
@@ -72,7 +72,7 @@ export function parse<T = unknown>(
     for (const inner of schema.anyOf) {
       const result = parse(
         dom,
-        inner as z.core.ZodStandardJSONSchemaPayload<unknown>,
+        inner as z.core.ZodStandardJSONSchemaPayload<unknown>
       );
 
       if (result !== undefined) return result as z.output<T>;

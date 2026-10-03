@@ -6,7 +6,8 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "rootDir": ".",
-    "types": ["node"]
+    "types": ["node"],
+    "lib": ["DOM"], // only for src/scripts/parser.ts
   },
   "include": ["**/*.ts"],
   "exclude": ["**/*.spec.ts"]
