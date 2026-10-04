@@ -1,0 +1,14 @@
+{
+  "version": "0.52.1",
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Android 16; Mobile; rv:147.0) Gecko/147.0 Firefox/147.0 (Compatible; lodestone-css-selectors/0.52.1; +https://github.com/xivapi/nodestone)"
+  },
+  "templates": {
+    "/": "https://%s.finalfantasyxiv.com/lodestone/",
+    "/character/:id/:column": "https://%s.finalfantasyxiv.com/lodestone/character/%d/%s/",
+    "/crossworld_linkshell/:id": "https://%s.finalfantasyxiv.com/lodestone/crossworld_linkshell/%s/",
+    "/freecompany/:id/:column": "https://%s.finalfantasyxiv.com/lodestone/freecompany/%d/%s",
+    "/linkshell/:id": "https://%s.finalfantasyxiv.com/lodestone/linkshell/%d/",
+    "/pvpteam/:id": "https://%s.finalfantasyxiv.com/lodestone/pvpteam/%s/"
+  }
+}

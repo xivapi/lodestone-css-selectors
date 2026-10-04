@@ -1,4 +1,0 @@
-allowBuilds:
-  esbuild: false
-minimumReleaseAgeExclude:
-  - '@miichom/xpath2css@0.1.6'
