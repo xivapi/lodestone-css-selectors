@@ -1,113 +1,111 @@
 {
-  "default": {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-      "name": {
-        "type": "string",
-        "selector": "p.frame__chara__name"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "selector": "p.frame__chara__name"
+    },
+    "server": {
+      "selector": "div.linkshell_characters > div.entry:first-of-type p.entry__world",
+      "type": "object",
+      "properties": {
+        "world": {
+          "type": "string"
+        },
+        "dc": {
+          "type": "string"
+        }
       },
-      "server": {
-        "selector": "div.linkshell_characters > div.entry:first-of-type p.entry__world",
+      "required": [
+        "world",
+        "dc"
+      ],
+      "additionalProperties": false
+    },
+    "members": {
+      "type": "array",
+      "items": {
         "type": "object",
         "properties": {
-          "world": {
+          "id": {
+            "selector": "a.entry__bg",
+            "attribute": "href",
+            "regex": "(\\d+)",
             "type": "string"
           },
-          "dc": {
-            "type": "string"
+          "name": {
+            "type": "string",
+            "selector": "p.entry__name"
+          },
+          "avatar": {
+            "type": "string",
+            "format": "uri",
+            "selector": "div.entry__chara__face > img",
+            "attribute": "src"
+          },
+          "server": {
+            "selector": "p.entry__world",
+            "type": "object",
+            "properties": {
+              "world": {
+                "type": "string"
+              },
+              "dc": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "world",
+              "dc"
+            ],
+            "additionalProperties": false
+          },
+          "rank": {
+            "default": null,
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "selector": "li.entry__chara_info__linkshell > span"
+                  },
+                  "icon": {
+                    "type": "string",
+                    "format": "uri",
+                    "selector": "li.entry__chara_info__linkshell > img",
+                    "attribute": "src"
+                  }
+                },
+                "required": [
+                  "name",
+                  "icon"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "required": [
-          "world",
-          "dc"
+          "id",
+          "name",
+          "avatar",
+          "server",
+          "rank"
         ],
         "additionalProperties": false
       },
-      "members": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "selector": "a.entry__bg",
-              "attribute": "href",
-              "regex": "(\\d+)",
-              "type": "string"
-            },
-            "name": {
-              "type": "string",
-              "selector": "p.entry__name"
-            },
-            "avatar": {
-              "type": "string",
-              "format": "uri",
-              "selector": "div.entry__chara__face > img",
-              "attribute": "src"
-            },
-            "server": {
-              "selector": "p.entry__world",
-              "type": "object",
-              "properties": {
-                "world": {
-                  "type": "string"
-                },
-                "dc": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "world",
-                "dc"
-              ],
-              "additionalProperties": false
-            },
-            "rank": {
-              "default": null,
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string",
-                      "selector": "li.entry__chara_info__linkshell > span"
-                    },
-                    "icon": {
-                      "type": "string",
-                      "format": "uri",
-                      "selector": "li.entry__chara_info__linkshell > img",
-                      "attribute": "src"
-                    }
-                  },
-                  "required": [
-                    "name",
-                    "icon"
-                  ],
-                  "additionalProperties": false
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            }
-          },
-          "required": [
-            "id",
-            "name",
-            "avatar",
-            "server",
-            "rank"
-          ],
-          "additionalProperties": false
-        },
-        "selector": "div.linkshell_characters > div.entry"
-      }
-    },
-    "required": [
-      "name",
-      "server",
-      "members"
-    ],
-    "additionalProperties": false
-  }
+      "selector": "div.linkshell_characters > div.entry"
+    }
+  },
+  "required": [
+    "name",
+    "server",
+    "members"
+  ],
+  "additionalProperties": false
 }

@@ -1,62 +1,60 @@
 {
-  "default": {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-      "score": {
-        "type": "number",
-        "selector": "p.achievement__point > span"
-      },
-      "total": {
-        "selector": "div.parts__fraction",
-        "regex": "(\\d+)",
-        "type": "number"
-      },
-      "items": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "selector": "a",
-              "attribute": "href",
-              "regex": "lodestone\\/character\\/\\d+\\/achievement\\/detail\\/(\\d+)",
-              "type": "number"
-            },
-            "name": {
-              "selector": "p.entry__activity__txt",
-              "regex": "\"(\\D+)\"",
-              "type": "string"
-            },
-            "icon": {
-              "type": "string",
-              "format": "uri",
-              "selector": "img",
-              "attribute": "src"
-            },
-            "obtained_at": {
-              "selector": "time.entry__activity__time > script",
-              "regex": "ldst_strftime\\((\\d+)",
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          "required": [
-            "id",
-            "name",
-            "icon",
-            "obtained_at"
-          ],
-          "additionalProperties": false
-        },
-        "selector": "div.ldst__bg li.entry"
-      }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "score": {
+      "type": "number",
+      "selector": "p.achievement__point > span"
     },
-    "required": [
-      "score",
-      "total",
-      "items"
-    ],
-    "additionalProperties": false
-  }
+    "total": {
+      "selector": "div.parts__fraction",
+      "regex": "(\\d+)",
+      "type": "number"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "selector": "a",
+            "attribute": "href",
+            "regex": "lodestone\\/character\\/\\d+\\/achievement\\/detail\\/(\\d+)",
+            "type": "number"
+          },
+          "name": {
+            "selector": "p.entry__activity__txt",
+            "regex": "\"(\\D+)\"",
+            "type": "string"
+          },
+          "icon": {
+            "type": "string",
+            "format": "uri",
+            "selector": "img",
+            "attribute": "src"
+          },
+          "obtained_at": {
+            "selector": "time.entry__activity__time > script",
+            "regex": "ldst_strftime\\((\\d+)",
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "icon",
+          "obtained_at"
+        ],
+        "additionalProperties": false
+      },
+      "selector": "div.ldst__bg li.entry"
+    }
+  },
+  "required": [
+    "score",
+    "total",
+    "items"
+  ],
+  "additionalProperties": false
 }

@@ -1,47 +1,45 @@
 {
-  "default": {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-      "total": {
-        "type": "number",
-        "selector": "p.minion__sort__total > span"
-      },
-      "items": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string",
-              "selector": "span[id]",
-              "attribute": "id"
-            },
-            "name": {
-              "type": "string",
-              "selector": "span.minion__name"
-            },
-            "icon": {
-              "type": "string",
-              "format": "uri",
-              "selector": "img",
-              "attribute": "src"
-            }
-          },
-          "required": [
-            "id",
-            "name",
-            "icon"
-          ],
-          "additionalProperties": false
-        },
-        "selector": "div.character__minions > ul.minion__list > li"
-      }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "number",
+      "selector": "p.minion__sort__total > span"
     },
-    "required": [
-      "total",
-      "items"
-    ],
-    "additionalProperties": false
-  }
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "selector": "span[id]",
+            "attribute": "id"
+          },
+          "name": {
+            "type": "string",
+            "selector": "span.minion__name"
+          },
+          "icon": {
+            "type": "string",
+            "format": "uri",
+            "selector": "img",
+            "attribute": "src"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "icon"
+        ],
+        "additionalProperties": false
+      },
+      "selector": "div.character__minions > ul.minion__list > li"
+    }
+  },
+  "required": [
+    "total",
+    "items"
+  ],
+  "additionalProperties": false
 }
