@@ -12,7 +12,7 @@
             "attribute": "class",
             "regex": "freecompany__focus_icon--(?P<Status>off)",
             "type": {
-              "Status": "string"
+                "Status": "string"
             }
         },
         "ICON": {
@@ -31,7 +31,7 @@
             "attribute": "class",
             "regex": "freecompany__focus_icon--(?P<Status>off)",
             "type": {
-              "Status": "string"
+                "Status": "string"
             }
         },
         "ICON": {
@@ -50,7 +50,7 @@
             "attribute": "class",
             "regex": "freecompany__focus_icon--(?P<Status>off)",
             "type": {
-              "Status": "string"
+                "Status": "string"
             }
         },
         "ICON": {
@@ -69,7 +69,7 @@
             "attribute": "class",
             "regex": "freecompany__focus_icon--(?P<Status>off)",
             "type": {
-              "Status": "string"
+                "Status": "string"
             }
         },
         "ICON": {
@@ -88,7 +88,7 @@
             "attribute": "class",
             "regex": "freecompany__focus_icon--(?P<Status>off)",
             "type": {
-              "Status": "string"
+                "Status": "string"
             }
         },
         "ICON": {

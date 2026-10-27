@@ -30,7 +30,7 @@
             "attribute": "data-tooltip",
             "regex": "/ (?P<RankName>.+)",
             "type": {
-              "RankName": "string"
+                "RankName": "string"
             }
         },
         "RANK_ICON": {
@@ -42,8 +42,8 @@
             "selector": ".entry__world",
             "regex": "(?P<World>\\w*)\\s+\\[(?P<DC>\\w*)\\]",
             "type": {
-              "World": "string",
-              "DC": "string"
+                "World": "string",
+                "DC": "string"
             }
         }
     }

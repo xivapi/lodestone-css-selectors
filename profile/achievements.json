@@ -11,8 +11,8 @@
             "selector": ".entry__activity__txt",
             "regex": "(?P<NameDE>.*) aus der Kategorie „|.*[\\\"「](?P<Name>.*)[\\\"」]",
             "type": {
-              "NameDE": "string",
-              "Name": "string"
+                "NameDE": "string",
+                "Name": "string"
             }
         },
         "ID": {
@@ -20,14 +20,14 @@
             "attribute": "href",
             "regex": "/lodestone/character/\\d*/achievement/detail/(?P<ID>\\d*)/",
             "type": {
-              "ID": "integer"
+                "ID": "integer"
             }
         },
         "TIME": {
             "selector": ".entry__activity__time > script",
             "regex": ".*ldst_strftime\\((?P<Timestamp>\\d*)",
             "type": {
-              "Timestamp": "integer"
+                "Timestamp": "integer"
             }
         }
     },
@@ -35,8 +35,8 @@
         "selector": "ul.btn__pager:nth-child(2) > li:nth-child(3)",
         "regex": "\\D*(?P<CurrentPage>\\d+)\\D*(?P<NumPages>\\d+)",
         "type": {
-          "CurrentPage": "integer",
-          "NumPages": "integer"
+            "CurrentPage": "integer",
+            "NumPages": "integer"
         }
     },
     "LIST_NEXT_BUTTON": {
@@ -51,7 +51,7 @@
         "selector": ".parts__total",
         "regex": "(?P<TotalAchievements>[0-9]*) \\D+",
         "type": {
-          "TotalAchievements": "integer"
+            "TotalAchievements": "integer"
         }
     },
     "ACHIEVEMENT_POINTS": {

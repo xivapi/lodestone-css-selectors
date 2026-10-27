@@ -9,7 +9,7 @@
             "attribute": "style",
             "regex": "width:(?P<Progress>\\d+)%;",
             "type": {
-              "Progress": "integer"
+                "Progress": "integer"
             }
         },
         "RANK": {
@@ -27,7 +27,7 @@
             "attribute": "style",
             "regex": "width:(?P<Progress>\\d+)%;",
             "type": {
-              "Progress": "integer"
+                "Progress": "integer"
             }
         },
         "RANK": {
@@ -45,7 +45,7 @@
             "attribute": "style",
             "regex": "width:(?P<Progress>\\d+)%;",
             "type": {
-              "Progress": "integer"
+                "Progress": "integer"
             }
         },
         "RANK": {
